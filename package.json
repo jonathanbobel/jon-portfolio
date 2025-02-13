@@ -1,0 +1,26 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./_site/css/tailwind.output.css",
+    "watch:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./_site/css/tailwind.output.css --watch",
+    "dev": "concurrently \"npx @11ty/eleventy --serve\" \"npm run watch:css\"",
+    "build": "npm run build:css && npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/postcss": "^4.0.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-cli": "^0.1.2"
+  }
+}

@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Lora", serif !important;
+}
+.prose h2 {
+  @apply text-3xl font-sans font-bold text-primary mt-8 mb-2;
+}
+.prose h3 {
+  @apply text-2xl font-sans font-semibold text-dark mt-6;
+}
+
+.prose ul {
+  @apply list-disc list-inside text-xl text-gray-700 mt-4;
+}
+
+.prose a {
+  @apply text-primary hover:underline font-semibold;
+}
