@@ -20,7 +20,6 @@ Built with:
 ## 🛠️ Technologies Used
 - **HTML5 / Nunjucks** – Templating for flexible page generation.
 - **Tailwind CSS** – For scalable, maintainable styling.
-- **JavaScript (D3.js, Alpine.js)** – Interactive elements & data visualization.
 - **Markdown & JSON** – Content and project management.
 - **11ty (Eleventy)** – Static site generator for efficiency.
 - **GitHub Actions** – Automations and CI/CD.
