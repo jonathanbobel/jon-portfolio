@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Jonathan Bobel</title>
+  <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/tailwind.output.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
+
+  <!-- Navbar -->
+  <nav class="bg-dark text-light fixed top-0 left-0 w-full shadow-md z-50 font-sans">
+  <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-3xl font-bold">
+      <a href="/">Jonathan Bobel - Portfolio</a>
+    </h1>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
+      <li>
+        <a href="/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/about/" class="relative before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/projects/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="/contact/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 md:hidden">
+    <a href="/" class="py-2 hover:text-primary">Home</a>
+    <a href="/about/" class="py-2 hover:text-primary">About</a>
+    <a href="/projects/" class="py-2 hover:text-primary">Projects</a>
+    <a href="/contact/" class="py-2 hover:text-primary">Contact</a>
+  </div>
+</nav>
+
+  <main class="container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
+    
+<section id="about" class="min-h-[calc(100vh-72px)] py-32 bg-light flex items-center justify-center px-5">
+  <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-20">
+    
+    <!-- Left Column: Title -->
+    <h2 class="text-4xl font-sans md:text-5xl font-bold text-primary md:w-1/3 text-center md:text-left">
+      About Me
+    </h2>
+
+    <!-- Right Column: Paragraphs stacked in a column -->
+    <div class="flex flex-col gap-4 md:w-2/3 max-w-2xl">
+      <p class="text-lg md:text-xl leading-relaxed">I design and code intuitive interfaces that make the web more accessible and enjoyable for everyone. My passion for human-centered design comes from being an outgoing, empathetic person—I want to create experiences that work for people of all abilities.</p>
+
+      <p class="text-lg md:text-xl leading-relaxed">I’ve always been drawn to the intersection of art and technology, which led me to a career in UI design and front-end development. Whether I’m crafting seamless digital experiences or advocating for accessibility, my goal is always to simplify complexity and make technology more inclusive.</p>
+
+      <p class="text-lg md:text-xl leading-relaxed">Outside of work, I’m a proud toddler dad, which means a lot of my time is spent chasing after my little one. When I’m not at the keyboard, you’ll probably find me cycling, hiking, snowboarding, or camping—anything that gets me outdoors. I’m deeply involved in local cycling advocacy, working to make biking safer and more accessible for everyone. I also love watching sports, swimming, and just being in nature.</p>
+
+      <p class="text-lg md:text-xl leading-relaxed">Born outside of Chicago, raised in Delaware, and having spent time in China, I’ve called Cleveland, Ohio home for quite a while now. I’m easy to laugh, always encouraging others to do the same, and I bring that same energy into my work—because good design should be clear, accessible, and maybe! even a little fun.</p>
+    </div>
+
+  </div>
+</section>  
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-6 text-center">
+    <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
+  </footer>
+
+</body>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</html>

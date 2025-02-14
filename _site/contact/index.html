@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Jonathan Bobel</title>
+  <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/tailwind.output.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
+
+  <!-- Navbar -->
+  <nav class="bg-dark text-light fixed top-0 left-0 w-full shadow-md z-50 font-sans">
+  <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-3xl font-bold">
+      <a href="/">Jonathan Bobel - Portfolio</a>
+    </h1>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
+      <li>
+        <a href="/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/about/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/projects/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="/contact/" class="relative before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 md:hidden">
+    <a href="/" class="py-2 hover:text-primary">Home</a>
+    <a href="/about/" class="py-2 hover:text-primary">About</a>
+    <a href="/projects/" class="py-2 hover:text-primary">Projects</a>
+    <a href="/contact/" class="py-2 hover:text-primary">Contact</a>
+  </div>
+</nav>
+
+  <main class="container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
+    
+<section id="contact" class="min-h-[calc(100vh-72px)] py-24 bg-light flex items-center justify-center px-8">
+  <div class="container mx-auto flex flex-col text-center max-w-2xl">
+    
+    <h2 class="text-4xl md:text-5xl font-bold text-primary font-sans">Get in Touch</h2>
+    
+    <p class="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
+      Feel free to reach out for freelance work or just to say hi!
+    </p>
+
+    <!-- Contact Buttons -->
+    <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
+      <!-- Email Button -->
+      <a href="mailto:jnbobel@gmail.com" 
+         class="bg-primary text-white text-lg md:text-xl px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans">
+        📧 Email Me
+      </a>
+
+      <!-- GitHub Button -->
+      <a href="https://github.com/jonathanbobel" target="_blank" 
+         class="bg-gray-800 text-white text-lg md:text-xl px-8 py-4 rounded-full font-semibold shadow-md hover:bg-gray-700 transition duration-300 font-sans">
+        🐙 GitHub
+      </a>
+
+      <!-- LinkedIn Button -->
+      <a href="https://www.linkedin.com/in/jonathanbobel/" target="_blank" 
+         class="bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-full font-semibold shadow-md hover:bg-blue-500 transition duration-300 font-sans">
+        🔗 LinkedIn
+      </a>
+    </div>
+
+  </div>
+</section>  
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-6 text-center">
+    <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
+  </footer>
+
+</body>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</html>

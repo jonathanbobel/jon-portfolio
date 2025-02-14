@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>US Web Design System - Inclusive Design Patterns - Jonathan Bobel</title>
+  <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/tailwind.output.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
+
+  <!-- Navbar -->
+  <nav class="bg-dark text-light fixed top-0 left-0 w-full shadow-md z-50 font-sans">
+  <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-3xl font-bold">
+      <a href="/">Jonathan Bobel - Portfolio</a>
+    </h1>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
+      <li>
+        <a href="/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/about/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/projects/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="/contact/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 md:hidden">
+    <a href="/" class="py-2 hover:text-primary">Home</a>
+    <a href="/about/" class="py-2 hover:text-primary">About</a>
+    <a href="/projects/" class="py-2 hover:text-primary">Projects</a>
+    <a href="/contact/" class="py-2 hover:text-primary">Contact</a>
+  </div>
+</nav>
+
+  <main class="container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
+    
+<section class="py-32 bg-light flex items-center justify-center px-8">
+  <div class="container mx-auto max-w-4xl">
+    
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">US Web Design System - Inclusive Design Patterns</h1>
+    
+    <img src="/images/uswds_patterns.jpg" alt="US Web Design System - Inclusive Design Patterns Screenshot" class="w-full shadow-lg my-8">
+
+    <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl"></p>
+
+    <article class="mt-12 text-left prose prose-lg text-dark text-xl">
+      <h2>Overview</h2>
+<p>Led the <strong>site redesign for 10x.gsa.gov</strong>, enhancing <strong>usability, accessibility, and branding</strong>. Focused on creating an intuitive interface that aligns with government standards.</p>
+<h2>Responsibilities</h2>
+<ul>
+<li>Applied <strong>design thinking</strong> and <strong>agile methodologies</strong> for innovation.</li>
+<li>Built a <strong>WCAG 2.2-compliant</strong> interface using <strong>US Web Design System (USWDS)</strong>.</li>
+<li>Improved functionality and usability for <strong>government innovation projects</strong>.</li>
+</ul>
+<!-- ## Screenshots
+![10x.gsa.gov Screenshot](/images/10x-gsa-screenshot.jpg) -->
+<!-- [View Project](https://designsystem.digital.gov/patterns/) -->
+    </article>
+
+    
+      <a href="https://designsystem.digital.gov/patterns/" class="mt-12 inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans text-xl">
+        Visit Project
+      </a>
+    
+
+  </div>
+</section>  
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-6 text-center">
+    <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
+  </footer>
+
+</body>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</html>

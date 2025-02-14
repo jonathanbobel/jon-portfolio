@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Jonathan Bobel</title>
+  <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/tailwind.output.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
+
+  <!-- Navbar -->
+  <nav class="bg-dark text-light fixed top-0 left-0 w-full shadow-md z-50 font-sans">
+  <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <h1 class="text-3xl font-bold">
+      <a href="/">Jonathan Bobel - Portfolio</a>
+    </h1>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
+      <li>
+        <a href="/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/about/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/projects/" class="relative before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="/contact/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 md:hidden">
+    <a href="/" class="py-2 hover:text-primary">Home</a>
+    <a href="/about/" class="py-2 hover:text-primary">About</a>
+    <a href="/projects/" class="py-2 hover:text-primary">Projects</a>
+    <a href="/contact/" class="py-2 hover:text-primary">Contact</a>
+  </div>
+</nav>
+
+  <main class="container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
+    
+<section id="projects" class="min-h-[calc(100vh-72px)] py-32 bg-light flex items-center justify-center px-5">
+  <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
+    
+    <!-- Left Column: Title -->
+    <h2 class="text-4xl font-sans md:text-5xl font-bold text-primary md:w-1/3 text-center md:text-left">
+      Projects
+    </h2>
+
+    <!-- Right Column: Project List -->
+    <div class="flex flex-col gap-24 md:w-2/3 max-w-2xl">
+      
+      <div class="flex flex-col items-left text-center md:text-left">
+        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">Notify.gov</h3>
+        <img src="/images/notify_landing.jpg" alt="Notify.gov Screenshot" class="w-full mb-4 border-2">
+        <p class="text-xl text-gray-700 mt-2 mb-2">Designed and developed the Notify.gov platform, a secure government messaging service. Led branding, front-end development, and accessibility improvements, ensuring compliance with WCAG 2.2 and the U.S. Web Design System (USWDS). Built data visualizations with D3.js to enhance insights.</p>
+        <a href="/projects/notify-gov/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      </div>
+      
+      <div class="flex flex-col items-left text-center md:text-left">
+        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">10x.gsa.gov - Redesign</h3>
+        <img src="/images/10x_impact.jpg" alt="10x.gsa.gov - Redesign Screenshot" class="w-full mb-4 border-2">
+        <p class="text-xl text-gray-700 mt-2 mb-2">Led the developement and assisted in the design of a reimagined 10x.gsa.gov, a platform for federal innovation funding, improving usability, accessibility, and information flow. Applied design thinking &amp; agile methodologies to revamp the site while maintaining USWDS consistency and meeting WCAG 2.2 standards.</p>
+        <a href="/projects/10x-redesign/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      </div>
+      
+      <div class="flex flex-col items-left text-center md:text-left">
+        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">US Web Design System - Inclusive Design Patterns</h3>
+        <img src="/images/uswds_patterns.jpg" alt="US Web Design System - Inclusive Design Patterns Screenshot" class="w-full mb-4 border-2">
+        <p class="text-xl text-gray-700 mt-2 mb-2"></p>
+        <a href="/projects/USWDS/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      </div>
+      
+    </div>
+
+  </div>
+</section>  
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-6 text-center">
+    <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
+  </footer>
+
+</body>
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</html>
