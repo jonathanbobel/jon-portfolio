@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Jonathan Bobel</title>
+  <title>Notify.gov - Jonathan Bobel</title>
   <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -19,16 +19,15 @@
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
     <h1 class="text-3xl font-bold">
-      Jonathan Bobel - Portfolio
+      <a href="/">Jonathan Bobel - Portfolio</a>
     </h1>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="block md:hidden text-white focus:outline-none" aria-label="Open mobile menu">
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
-
 
     <!-- Navigation Links -->
     <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
@@ -48,7 +47,7 @@
         </a>
       </li>
       <li>
-        <a href="/contact/" class="relative before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+        <a href="/contact/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-primary before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
           Contact
         </a>
       </li>
@@ -56,45 +55,47 @@
   </div>
 
   <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 px-4 md:hidden space-y-4">
-    <a href="/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Home</a>
-    <a href="/about/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">About</a>
-    <a href="/projects/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Projects</a>
-    <a href="/contact/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Contact</a>
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 px-2 md:hidden space-y-4">
+    <a href="/" class="text-xl py-2 px-4 hover:text-primary focus:outline-none">Home</a>
+    <a href="/about/" class="text-xl py-2 px-4 hover:text-primary focus:outline-none">About</a>
+    <a href="/projects/" class="text-xl py-2 px-4 hover:text-primary focus:outline-none">Projects</a>
+    <a href="/contact/" class="text-xl py-2 px-4 hover:text-primary focus:outline-none">Contact</a>
   </div>
 </nav>
 
   <main class="container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
     
-<section id="contact" class="min-h-[calc(100vh-72px)] py-24 bg-light flex items-center justify-center px-8">
-  <div class="container mx-auto flex flex-col text-center max-w-2xl">
+<section class="py-32 bg-light flex items-center justify-center px-8">
+  <div class="container mx-auto max-w-4xl">
     
-    <h2 class="text-4xl md:text-5xl font-bold text-primary font-sans">Get in Touch</h2>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">Notify.gov</h1>
     
-    <p class="mt-6 text-xl md:text-2xl leading-relaxed text-gray-700">
-      Feel free to reach out for freelance work or just to say hi!
-    </p>
+    <img src="/images/notify_landing.jpg" alt="Notify.gov Screenshot" class="w-full shadow-lg my-8">
 
-    <!-- Contact Buttons -->
-    <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
-      <!-- Email Button -->
-      <a href="mailto:jnbobel@gmail.com" 
-         class="bg-primary text-white text-lg md:text-xl px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans">
-        📧 Email Me
-      </a>
+    <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Designed and developed the Notify.gov platform, a secure government messaging service. Led branding, front-end development, and accessibility improvements, ensuring compliance with WCAG 2.2 and the U.S. Web Design System (USWDS). Built data visualizations with D3.js to enhance insights.</p>
 
-      <!-- GitHub Button -->
-      <a href="https://github.com/jonathanbobel" target="_blank" 
-         class="bg-gray-800 text-white text-lg md:text-xl px-8 py-4 rounded-full font-semibold shadow-md hover:bg-gray-700 transition duration-300 font-sans">
-        🐙 GitHub
-      </a>
+    <article class="mt-12 text-left prose prose-lg text-dark text-xl">
+      <h2>Overview</h2>
+<p>Led front-end development and accessibility improvements for <strong>Notify.gov</strong>, a secure government messaging platform. Designed the <strong>branding, color palette, and style guide</strong>, ensuring compliance with <strong>WCAG 2.2 standards</strong>.</p>
+<h2>Responsibilities</h2>
+<ul>
+<li>Developed accessible front-end solutions aligned with <strong>US Web Design System (USWDS)</strong>.</li>
+<li>Created <strong>data visualizations</strong> using <strong>D3.js</strong> to turn complex data into insights.</li>
+<li>Led the <strong>branding efforts</strong>, including <strong>logo design and visual identity</strong>.</li>
+<li>Conducted <strong>accessibility audits</strong> and automated checks in GitHub workflows.</li>
+</ul>
+<!-- 
+## Screenshots
+![Notify.gov Screenshot](/images/notify-gov-screenshot.jpg)
 
-      <!-- LinkedIn Button -->
-      <a href="https://www.linkedin.com/in/jonathanbobel/" target="_blank" 
-         class="bg-blue-600 text-white text-lg md:text-xl px-8 py-4 rounded-full font-semibold shadow-md hover:bg-blue-500 transition duration-300 font-sans">
-        🔗 LinkedIn
+[View Project](https://notify.gov) -->
+    </article>
+
+    
+      <a href="https://notify.gov" class="mt-12 inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans text-xl">
+        Visit Project
       </a>
-    </div>
+    
 
   </div>
 </section>  

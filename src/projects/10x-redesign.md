@@ -1,5 +1,6 @@
 ---
-title: "10x.gsa.gov - Redesign"
+title: "10x.gsa.gov"
+order: 3
 description: "Led the developement and assisted in the design of a reimagined 10x.gsa.gov, a platform for federal innovation funding, improving usability, accessibility, and information flow. Applied design thinking & agile methodologies to revamp the site while maintaining USWDS consistency and meeting WCAG 2.2 standards."
 company: "Flexion (GSA 10x)"
 duration: "2023"
@@ -16,6 +17,7 @@ Led the **site redesign for 10x.gsa.gov**, enhancing **usability, accessibility,
 - Applied **design thinking** and **agile methodologies** for innovation.
 - Built a **WCAG 2.2-compliant** interface using **US Web Design System (USWDS)**.
 - Improved functionality and usability for **government innovation projects**.
+- Designed the FY23 Impact Report
 
 <!-- ## Screenshots
 ![10x.gsa.gov Screenshot](/images/10x-gsa-screenshot.jpg)

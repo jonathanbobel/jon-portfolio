@@ -1,5 +1,6 @@
 ---
 title: "Notify.gov"
+order: 1
 description: "Designed and developed the Notify.gov platform, a secure government messaging service. Led branding, front-end development, and accessibility improvements, ensuring compliance with WCAG 2.2 and the U.S. Web Design System (USWDS). Built data visualizations with D3.js to enhance insights."
 company: "Flexion (GSA 10x)"
 duration: "2022 - Present"

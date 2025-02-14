@@ -6,6 +6,8 @@
   <title>US Web Design System - Inclusive Design Patterns - Jonathan Bobel</title>
   <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,15 +19,16 @@
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
     <h1 class="text-3xl font-bold">
-      <a href="/">Jonathan Bobel - Portfolio</a>
+      Jonathan Bobel - Portfolio
     </h1>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none" aria-label="Open mobile menu">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
+
 
     <!-- Navigation Links -->
     <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
@@ -53,11 +56,11 @@
   </div>
 
   <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 md:hidden">
-    <a href="/" class="py-2 hover:text-primary">Home</a>
-    <a href="/about/" class="py-2 hover:text-primary">About</a>
-    <a href="/projects/" class="py-2 hover:text-primary">Projects</a>
-    <a href="/contact/" class="py-2 hover:text-primary">Contact</a>
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 px-4 md:hidden space-y-4">
+    <a href="/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Home</a>
+    <a href="/about/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">About</a>
+    <a href="/projects/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Projects</a>
+    <a href="/contact/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Contact</a>
   </div>
 </nav>
 
@@ -70,16 +73,20 @@
     
     <img src="/images/uswds_patterns.jpg" alt="US Web Design System - Inclusive Design Patterns Screenshot" class="w-full shadow-lg my-8">
 
-    <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl"></p>
+    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">I worked as a front-end developer, UX designer, and researcher on a project focused on creating design patterns for the U.S. Web Design System (USWDS) that emphasize diversity, equity, and inclusion (DEI). These patterns serve as frameworks for creating inclusive and accessible digital experiences, integrating key considerations from user research and accessibility guidelines. My role involved contributing to the design and development of patterns that ensure digital experiences are equitable, reflecting diverse user needs and real-world experiences.</p> -->
 
     <article class="mt-12 text-left prose prose-lg text-dark text-xl">
       <h2>Overview</h2>
-<p>Led the <strong>site redesign for 10x.gsa.gov</strong>, enhancing <strong>usability, accessibility, and branding</strong>. Focused on creating an intuitive interface that aligns with government standards.</p>
+<p>I contributed to the development of <strong>inclusive design patterns</strong> for the U.S. Web Design System (USWDS), ensuring digital experiences were <strong>accessible, equitable, and user-centered</strong>.</p>
 <h2>Responsibilities</h2>
 <ul>
-<li>Applied <strong>design thinking</strong> and <strong>agile methodologies</strong> for innovation.</li>
-<li>Built a <strong>WCAG 2.2-compliant</strong> interface using <strong>US Web Design System (USWDS)</strong>.</li>
-<li>Improved functionality and usability for <strong>government innovation projects</strong>.</li>
+<li>Collaborated with cross-functional teams to design and refine DEI-focused design patterns for common user interactions.</li>
+<li>Conducted <strong>user research</strong> to identify pain points and ensure the patterns met the needs of diverse user groups.</li>
+<li>Developed <strong>front-end components</strong> based on design patterns, integrating <strong>accessibility standards</strong> and best practices.</li>
+<li>Led <strong>accessibility audits</strong> to ensure patterns met <strong>WCAG guidelines</strong> and other accessibility requirements.</li>
+<li>Created and maintained documentation on design patterns, ensuring clarity for digital teams implementing them.</li>
+<li>Provided <strong>design and UX guidance</strong> to ensure patterns reflected inclusive language and equity principles.</li>
+<li>Participated in feedback loops with stakeholders to continuously improve and evolve the patterns based on real-world use and research insights.</li>
 </ul>
 <!-- ## Screenshots
 ![10x.gsa.gov Screenshot](/images/10x-gsa-screenshot.jpg) -->
@@ -97,7 +104,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light py-6 text-center">
+  <footer class="bg-dark text-light py-6 text-center font-sans">
     <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
   </footer>
 

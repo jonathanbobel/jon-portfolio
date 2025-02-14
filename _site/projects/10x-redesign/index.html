@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>10x.gsa.gov - Redesign - Jonathan Bobel</title>
+  <title>10x.gsa.gov - Jonathan Bobel</title>
   <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,15 +19,16 @@
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
     <h1 class="text-3xl font-bold">
-      <a href="/">Jonathan Bobel - Portfolio</a>
+      Jonathan Bobel - Portfolio
     </h1>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none" aria-label="Open mobile menu">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
+
 
     <!-- Navigation Links -->
     <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
@@ -53,11 +56,11 @@
   </div>
 
   <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 md:hidden">
-    <a href="/" class="py-2 hover:text-primary">Home</a>
-    <a href="/about/" class="py-2 hover:text-primary">About</a>
-    <a href="/projects/" class="py-2 hover:text-primary">Projects</a>
-    <a href="/contact/" class="py-2 hover:text-primary">Contact</a>
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 px-4 md:hidden space-y-4">
+    <a href="/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Home</a>
+    <a href="/about/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">About</a>
+    <a href="/projects/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Projects</a>
+    <a href="/contact/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Contact</a>
   </div>
 </nav>
 
@@ -66,11 +69,11 @@
 <section class="py-32 bg-light flex items-center justify-center px-8">
   <div class="container mx-auto max-w-4xl">
     
-    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">10x.gsa.gov - Redesign</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">10x.gsa.gov</h1>
     
-    <img src="/images/10x_impact.jpg" alt="10x.gsa.gov - Redesign Screenshot" class="w-full shadow-lg my-8">
+    <img src="/images/10x_impact.jpg" alt="10x.gsa.gov Screenshot" class="w-full shadow-lg my-8">
 
-    <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Led the developement and assisted in the design of a reimagined 10x.gsa.gov, a platform for federal innovation funding, improving usability, accessibility, and information flow. Applied design thinking &amp; agile methodologies to revamp the site while maintaining USWDS consistency and meeting WCAG 2.2 standards.</p>
+    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Led the developement and assisted in the design of a reimagined 10x.gsa.gov, a platform for federal innovation funding, improving usability, accessibility, and information flow. Applied design thinking &amp; agile methodologies to revamp the site while maintaining USWDS consistency and meeting WCAG 2.2 standards.</p> -->
 
     <article class="mt-12 text-left prose prose-lg text-dark text-xl">
       <h2>Overview</h2>
@@ -80,6 +83,7 @@
 <li>Applied <strong>design thinking</strong> and <strong>agile methodologies</strong> for innovation.</li>
 <li>Built a <strong>WCAG 2.2-compliant</strong> interface using <strong>US Web Design System (USWDS)</strong>.</li>
 <li>Improved functionality and usability for <strong>government innovation projects</strong>.</li>
+<li>Designed the FY23 Impact Report</li>
 </ul>
 <!-- ## Screenshots
 ![10x.gsa.gov Screenshot](/images/10x-gsa-screenshot.jpg)
@@ -98,7 +102,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light py-6 text-center">
+  <footer class="bg-dark text-light py-6 text-center font-sans">
     <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
   </footer>
 

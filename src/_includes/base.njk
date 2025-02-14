@@ -6,6 +6,8 @@
   <title>{% if title %}{{ title }} - {% endif %}Jonathan Bobel</title>
   <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,15 +19,16 @@
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
     <h1 class="text-3xl font-bold">
-      <a href="/">Jonathan Bobel - Portfolio</a>
+      Jonathan Bobel - Portfolio
     </h1>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="block md:hidden text-white focus:outline-none">
+    <button id="menu-btn" class="block md:hidden text-white focus:outline-none" aria-label="Open mobile menu">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
     </button>
+
 
     <!-- Navigation Links -->
     <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
@@ -53,11 +56,11 @@
   </div>
 
   <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 md:hidden">
-    <a href="/" class="py-2 hover:text-primary">Home</a>
-    <a href="/about/" class="py-2 hover:text-primary">About</a>
-    <a href="/projects/" class="py-2 hover:text-primary">Projects</a>
-    <a href="/contact/" class="py-2 hover:text-primary">Contact</a>
+  <div id="mobile-menu" class="hidden flex-col items-center bg-dark text-light py-4 px-4 md:hidden space-y-4">
+    <a href="/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Home</a>
+    <a href="/about/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">About</a>
+    <a href="/projects/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Projects</a>
+    <a href="/contact/" class="text-xl py-2 px-2 hover:text-primary focus:outline-none">Contact</a>
   </div>
 </nav>
 
@@ -66,7 +69,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light py-6 text-center">
+  <footer class="bg-dark text-light py-6 text-center font-sans">
     <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
   </footer>
 
