@@ -1,6 +1,5 @@
 ---
 title: "Lara Bobel - Portfolio"
-order: 5
 description: "Developed the portfolio site for Lara Bobel. Used AngularJS because that's just what I knew at the time."
 company: "Personal"
 duration: "2020"
@@ -8,6 +7,7 @@ technologies: ["AngularJS"]
 link: "https://larabobel.com"
 image: "/images/lara_bobel.jpg"
 layout: "project.njk"
+order: 5
 ---
 
 ## Overview
