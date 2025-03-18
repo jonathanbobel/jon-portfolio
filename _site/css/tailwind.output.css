@@ -1029,7 +1029,7 @@ body {
 .prose a {
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgb(226 90 40 / var(--tw-text-opacity));
+  color: rgb(28 130 130 / var(--tw-text-opacity));
 }
 
 .prose a:hover {
@@ -1094,10 +1094,10 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.before\:bg-primary::before {
+.before\:bg-teal::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
-  background-color: rgb(226 90 40 / var(--tw-bg-opacity));
+  background-color: rgb(28 130 130 / var(--tw-bg-opacity));
 }
 
 .before\:transition-transform::before {
@@ -1132,9 +1132,9 @@ body {
   --tw-bg-opacity: 0.9;
 }
 
-.hover\:text-primary:hover {
+.hover\:text-teal:hover {
   --tw-text-opacity: 1;
-  color: rgb(226 90 40 / var(--tw-text-opacity));
+  color: rgb(28 130 130 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {

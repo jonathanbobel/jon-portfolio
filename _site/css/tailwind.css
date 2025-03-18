@@ -17,7 +17,7 @@ body {
 }
 
 .prose a {
-  @apply text-primary hover:underline font-semibold;
+  @apply text-teal hover:underline font-semibold;
 }
 
 @layer base {
