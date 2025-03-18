@@ -15,7 +15,7 @@
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 
   <!-- Navbar -->
-  <nav class="bg-dark text-light fixed top-0 left-0 w-full shadow-md z-50 font-sans">
+  <nav class="bg-light fixed top-0 left-0 w-full z-50 font-sans">
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
     <h1 class="text-3xl font-bold">
@@ -23,7 +23,7 @@
     </h1>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="block md:hidden text-white focus:outline-none" aria-label="Open mobile menu">
+    <button id="menu-btn" class="block md:hidden text-dark focus:outline-none" aria-label="Open mobile menu">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -97,14 +97,15 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light py-6 text-center font-sans">
+  <footer class="bg-dark text-light py-3 text-center font-sans">
     <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
   </footer>
 
 </body>
     <script>
       document.getElementById('menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
+      document.getElementById('mobile-menu').classList.toggle('hidden');
   });
 </script>
+      <script src="/js/main.js"></script>
 </html>

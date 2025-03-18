@@ -19,3 +19,25 @@ body {
 .prose a {
   @apply text-primary hover:underline font-semibold;
 }
+
+@layer base {
+  html, body {
+    @apply text-dark;
+  }
+}
+
+.rotating-text {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-out {
+    transition: none;
+  }
+}

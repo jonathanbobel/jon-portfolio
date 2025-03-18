@@ -15,7 +15,7 @@
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 
   <!-- Navbar -->
-  <nav class="bg-dark text-light fixed top-0 left-0 w-full shadow-md z-50 font-sans">
+  <nav class="bg-light fixed top-0 left-0 w-full z-50 font-sans">
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
     <h1 class="text-3xl font-bold">
@@ -23,7 +23,7 @@
     </h1>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="block md:hidden text-white focus:outline-none" aria-label="Open mobile menu">
+    <button id="menu-btn" class="block md:hidden text-dark focus:outline-none" aria-label="Open mobile menu">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
       </svg>
@@ -66,9 +66,8 @@
 
   <main class="container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
     
-<section class="min-h-[calc(100vh-72px)] py-32 bg-light flex items-center justify-center px-5">
-  <div class="container mx-auto flex flex-col md:flex-row items-center md:items-center gap-20">
-    
+<section class="min-h-[calc(100vh-48px)] py-32 bg-light flex items-center justify-center px-5">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-center gap-14 h-full">    
     <!-- Image -->
     <img src="/images/me.jpg" alt="Jonathan Bobel" 
       class="border-8 border-primary w-80 h-80 md:w-96 md:h-96 rounded-full shadow-lg 
@@ -78,11 +77,10 @@
     <div class="text-center md:text-left">
       <h2 class="text-4xl md:text-6xl font-bold font-sans text-primary">
         Jonathan Bobel<br>
-        <span class="text-teal">Design Technologist</span>
+        <span class="text-teal rotating-text" aria-live="polite" aria-atomic="true">Design Technologist</span>
       </h2>
       <p class="mt-4 text-lg md:text-2xl max-w-xl leading-relaxed">
-        Hey there! Welcome to my portfolio. Feel free to explore my work and get to know what I do. If you’d like to connect, just click 
-        <a href="/contact" class="text-primary underline">here</a>.
+        I design and code intuitive interfaces that make the web more accessible and enjoyable for everyone. My passion for human-centered design comes from being an outgoing, empathetic person — I strive to create experiences that work for people of all abilities. Want to connect? Just click <a href="/contact" class="text-teal underline">here</a>.
       </p>
     </div>
   
@@ -91,14 +89,15 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light py-6 text-center font-sans">
+  <footer class="bg-dark text-light py-3 text-center font-sans">
     <p>&copy; 2025 Jonathan Bobel. All rights reserved.</p>
   </footer>
 
 </body>
     <script>
       document.getElementById('menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
+      document.getElementById('mobile-menu').classList.toggle('hidden');
   });
 </script>
+      <script src="/js/main.js"></script>
 </html>
