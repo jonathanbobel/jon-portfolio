@@ -4,7 +4,7 @@ description: "Created a parallax site for Antidote Functional Therapies"
 company: "Personal"
 duration: "2020"
 technologies: ["Parallax, JS"]
-link: "/sites/antidote"
+link: "/sites/antidote/"
 image: "/images/antidote.jpg"
 layout: "project.njk"
 order: 4
