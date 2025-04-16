@@ -1,6 +1,6 @@
 ---
 title: "Antidote Therapies"
-description: "Created a parallax site for Antidote Functional Therapies"
+description: "Parallax site for Antidote Functional Therapies"
 company: "Personal"
 duration: "2020"
 technologies: ["Parallax, JS"]

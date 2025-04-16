@@ -1,6 +1,6 @@
 ---
 title: "Lara Bobel - Portfolio"
-description: "Developed the portfolio site for Lara Bobel. Used AngularJS because that's just what I knew at the time."
+description: "Portfolio site for Lara Bobel. Written in AngularJS."
 company: "Personal"
 duration: "2020"
 technologies: ["AngularJS"]
