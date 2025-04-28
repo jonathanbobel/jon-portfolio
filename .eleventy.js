@@ -8,6 +8,8 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/projects/*.md");
   });
 
+  eleventyConfig.addGlobalData("env", process.env.ELEVENTY_ENV || "development");
+
   return {
     dir: {
       input: "src",

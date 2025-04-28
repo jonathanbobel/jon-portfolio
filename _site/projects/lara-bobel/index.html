@@ -10,7 +10,7 @@
   <link rel="preload" href="/fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/css/tailwind.output.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 
@@ -73,7 +73,7 @@
     
     <img src="/images/lara_bobel.jpg" alt="Lara Bobel - Portfolio Screenshot" class="w-full shadow-lg my-8">
 
-    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Developed the portfolio site for Lara Bobel. Used AngularJS because that&#39;s just what I knew at the time.</p> -->
+    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Portfolio site for Lara Bobel. Written in AngularJS.</p> -->
 
     <article class="mt-12 text-left prose prose-lg text-dark text-xl">
       <h2>Overview</h2>
@@ -97,10 +97,9 @@
   </footer>
 
 </body>
+    <script src="/js/main.js"></script>
     <script>
-      document.getElementById('menu-btn').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-</script>
-      <script src="/js/main.js"></script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    
 </html>

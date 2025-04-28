@@ -10,7 +10,7 @@
   <link rel="preload" href="/fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/css/tailwind.output.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 
@@ -107,10 +107,9 @@
   </footer>
 
 </body>
+    <script src="/js/main.js"></script>
     <script>
-      document.getElementById('menu-btn').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-</script>
-      <script src="/js/main.js"></script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    
 </html>

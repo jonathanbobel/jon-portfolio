@@ -1,24 +1,35 @@
 // Add this to your JavaScript file or in a script tag at the bottom of your HTML
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('loaded');
-    // Array of titles to rotate through
-    const titles = [
-      "Design Technologist",
-      "Frontend Developer",
-      "UI/UX Designer",
-      "Creative Coder",
-      "Interaction Designer",
-      "Jiu Jitsu Black Belt",
-      "Toddler Dad",
-      "Cycling Advocate",
-      "Outdoors Enthusiast"
-    ];
-    
-    // Get the element where we'll display the rotating text
-    const titleElement = document.querySelector('.rotating-text');
-    
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Array of titles to rotate through
+  const titles = [
+    "Design Technologist",
+    "Frontend Developer",
+    "UI/UX Designer",
+    "Creative Coder",
+    "Interaction Designer",
+    "Jiu Jitsu Black Belt",
+    "Toddler Dad",
+    "Cycling Advocate",
+    "Outdoors Enthusiast"
+  ];
+  
+  // Get the element where we'll display the rotating text
+  const titleElement = document.querySelector('.rotating-text');
+
+  if(titleElement) {
     let currentIndex = 0;
-    
+  
     // Function to update the text with fade effect
     function updateTitle() {
       // Fade out
@@ -34,4 +45,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Change the title every 5 seconds
     setInterval(updateTitle, 5000);
-  });
+  }
+});

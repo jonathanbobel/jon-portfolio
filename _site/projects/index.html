@@ -10,7 +10,7 @@
   <link rel="preload" href="/fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/css/tailwind.output.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 
@@ -104,14 +104,14 @@
       <div class="flex flex-col items-left text-center md:text-left">
         <h3 class="text-3xl font-sans font-semibold text-dark mb-4">Antidote Therapies</h3>
         <img src="/images/antidote.jpg" alt="Antidote Therapies Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">Created a parallax site for Antidote Functional Therapies</p>
+        <p class="text-xl text-gray-700 mt-2 mb-2">Parallax site for Antidote Functional Therapies</p>
         <a href="/projects/antidote/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
       </div>
       
       <div class="flex flex-col items-left text-center md:text-left">
         <h3 class="text-3xl font-sans font-semibold text-dark mb-4">Lara Bobel - Portfolio</h3>
         <img src="/images/lara_bobel.jpg" alt="Lara Bobel - Portfolio Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">Developed the portfolio site for Lara Bobel. Used AngularJS because that&#39;s just what I knew at the time.</p>
+        <p class="text-xl text-gray-700 mt-2 mb-2">Portfolio site for Lara Bobel. Written in AngularJS.</p>
         <a href="/projects/lara-bobel/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
       </div>
       
@@ -127,10 +127,9 @@
   </footer>
 
 </body>
+    <script src="/js/main.js"></script>
     <script>
-      document.getElementById('menu-btn').addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-</script>
-      <script src="/js/main.js"></script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    
 </html>

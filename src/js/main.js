@@ -1,5 +1,16 @@
 // Add this to your JavaScript file or in a script tag at the bottom of your HTML
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
   // Array of titles to rotate through
   const titles = [
     "Design Technologist",
