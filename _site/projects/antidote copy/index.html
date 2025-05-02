@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Jonathan Bobel</title>
+  <title>Antidote Therapies - Jonathan Bobel</title>
   <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -46,7 +46,7 @@
         </a>
       </li>
       <li>
-        <a href="/projects/" class="relative before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
+        <a href="/projects/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
           Projects
         </a>
       </li>
@@ -69,22 +69,32 @@
 
   <main class="container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
     
-<!-- Use collections (plural) and pipe to a proper sort filter -->
-
-
-<section id="projects" class="min-h-[calc(100vh-48px)] py-32 bg-light flex px-5">
-  <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-20">
+<section class="py-32 bg-light flex items-center justify-center px-8">
+  <div class="container mx-auto max-w-4xl">
     
-    <!-- Left Column: Title -->
-    <h2 class="text-4xl md:sticky md:top-32 self-start font-sans md:text-6xl font-bold text-primary md:w-1/3 text-center md:text-left">
-      Projects
-    </h2>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">Antidote Therapies</h1>
+    
+    <img src="/images/antidote.jpg" alt="Antidote Therapies Screenshot" class="w-full shadow-lg my-8">
 
-    <!-- Right Column: Project List -->
-    <div class="flex flex-col gap-24 md:w-2/3 max-w-2xl" id="projectList">
-      
-      <p>Loading projects...</p>
-    </div>
+    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Parallax site for Antidote Functional Therapies</p> -->
+
+    <article class="mt-12 text-left prose prose-lg text-dark text-xl">
+      <h2>Overview</h2>
+<p>Partnered with my wife Lara Bobel on a project for a local massage therapist. Leaning heavily on Gray's Anatomy (the anatomy book, not TV show) to drive the branding, creating an engaging parallax SPA to showcase the treatements and therapists at Antidote.</p>
+<h2>Responsibilities</h2>
+<ul>
+<li>Utilized <strong>skrollr.js</strong> to assist with creating a parallax experience</li>
+<li>Site was originally written in Angular</li>
+</ul>
+
+    </article>
+
+    
+      <a href="/sites/antidote/" class="mt-12 inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans text-xl">
+        Visit Project
+      </a>
+    
+
   </div>
 </section>  
   </main>

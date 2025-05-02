@@ -6,7 +6,7 @@ layout: base.njk
 <!-- Use collections (plural) and pipe to a proper sort filter -->
 {% set projectList = collections.projects | sort(attribute='data.order') %}
 
-<section id="projects" class="min-h-[calc(100vh-48px)] py-32 bg-light flex items-center justify-center px-5">
+<section id="projects" class="min-h-[calc(100vh-48px)] py-32 bg-light flex px-5">
   <div class="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-20">
     
     <!-- Left Column: Title -->
@@ -24,7 +24,7 @@ layout: base.njk
         <a href="{{ project.url }}" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
       </div>
       {% endfor %} #}
-              <p>Loading projects...</p>
+      <p>Loading projects...</p>
     </div>
   </div>
 </section>
