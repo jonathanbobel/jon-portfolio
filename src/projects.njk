@@ -16,18 +16,18 @@ layout: base.njk
 
     <!-- Right Column: Project List -->
     <div class="flex flex-col gap-24 md:w-2/3 max-w-2xl" id="projectList">
-      {# {% for project in projectList %}
+      {% for project in projectList %}
       <div class="flex flex-col items-left text-center md:text-left">
         <h3 class="text-3xl font-sans font-semibold text-dark mb-4">{{ project.data.title }}</h3>
         <img src="{{ project.data.image }}" alt="{{ project.data.title }} Screenshot" class="w-full mb-4 border-2">
         <p class="text-xl text-gray-700 mt-2 mb-2">{{ project.data.description }}</p>
         <a href="{{ project.url }}" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
       </div>
-      {% endfor %} #}
-      <div class="flex flex-col items-center justify-center py-16" id="loadingSpinner">
+      {% endfor %}
+      {# <div class="flex flex-col items-center justify-center py-16" id="loadingSpinner">
         <div class="h-10 w-10 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
         <p class="text-lg text-gray-600">Loading projects...</p>
-      </div>
+      </div> #}
     </div>
   </div>
 </section>
