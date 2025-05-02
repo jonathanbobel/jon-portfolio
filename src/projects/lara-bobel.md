@@ -7,7 +7,7 @@ technologies: ["AngularJS"]
 link: "https://larabobel.com"
 image: "/images/lara_bobel.jpg"
 layout: "project.njk"
-order: 5
+order: 6
 ---
 
 ## Overview

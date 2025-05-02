@@ -7,7 +7,7 @@ technologies: ["USWDS", "JavaScript", "WCAG 2.2", "Design Thinking", "Accessibil
 link: "https://designsystem.digital.gov/patterns/"
 image: "/images/uswds_patterns.jpg"
 layout: "project.njk"
-order: 2
+order: 3
 ---
 
 ## Overview

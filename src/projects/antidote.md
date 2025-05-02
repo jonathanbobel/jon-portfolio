@@ -7,7 +7,7 @@ technologies: ["Parallax, JS"]
 link: "/sites/antidote/"
 image: "/images/antidote.jpg"
 layout: "project.njk"
-order: 4
+order: 5
 ---
 
 ## Overview

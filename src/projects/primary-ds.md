@@ -7,7 +7,7 @@ technologies: ["React, JS"]
 link: "https://primary-design-system.vercel.app/"
 image: "/images/primary_screenshot.png"
 layout: "project.njk"
-order: 4
+order: 2
 ---
 
 ## Overview
