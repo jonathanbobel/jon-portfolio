@@ -83,7 +83,10 @@
     <!-- Right Column: Project List -->
     <div class="flex flex-col gap-24 md:w-2/3 max-w-2xl" id="projectList">
       
-      <p>Loading projects...</p>
+      <div class="flex flex-col items-center justify-center py-16" id="loadingSpinner">
+        <div class="h-10 w-10 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
+        <p class="text-lg text-gray-600">Loading projects...</p>
+      </div>
     </div>
   </div>
 </section>  

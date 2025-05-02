@@ -24,7 +24,10 @@ layout: base.njk
         <a href="{{ project.url }}" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
       </div>
       {% endfor %} #}
-      <p>Loading projects...</p>
+      <div class="flex flex-col items-center justify-center py-16" id="loadingSpinner">
+        <div class="h-10 w-10 border-4 border-primary border-t-transparent rounded-full animate-spin mb-4"></div>
+        <p class="text-lg text-gray-600">Loading projects...</p>
+      </div>
     </div>
   </div>
 </section>
