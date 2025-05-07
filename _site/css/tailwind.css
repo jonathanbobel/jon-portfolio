@@ -41,3 +41,8 @@ body {
     transition: none;
   }
 }
+
+/* Only needed if you're not using Tailwind's arbitrary variants */
+input:checked ~ .dot {
+  transform: translateX(100%);
+}
