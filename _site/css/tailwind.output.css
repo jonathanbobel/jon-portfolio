@@ -743,6 +743,50 @@ html, body {
   height: 0.25rem;
 }
 
+.h-\[2em\] {
+  height: 2em;
+}
+
+.h-\[1em\] {
+  height: 1em;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-\[64px\] {
+  height: 64px;
+}
+
+.h-\[66px\] {
+  height: 66px;
+}
+
+.h-\[72px\] {
+  height: 72px;
+}
+
+.h-\[48px\] {
+  height: 48px;
+}
+
+.h-\[54px\] {
+  height: 54px;
+}
+
+.h-\[46px\] {
+  height: 46px;
+}
+
+.h-\[44px\] {
+  height: 44px;
+}
+
 .min-h-\[calc\(100vh-48px\)\] {
   min-height: calc(100vh - 48px);
 }
@@ -781,6 +825,34 @@ html, body {
 
 .w-3\/4 {
   width: 75%;
+}
+
+.w-\[220px\] {
+  width: 220px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
+.w-\[800px\] {
+  width: 800px;
+}
+
+.w-\[700px\] {
+  width: 700px;
+}
+
+.w-\[648px\] {
+  width: 648px;
+}
+
+.w-\[630px\] {
+  width: 630px;
 }
 
 .max-w-2xl {
@@ -893,6 +965,10 @@ html, body {
   gap: 1rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -919,6 +995,10 @@ html, body {
 
 .self-start {
   align-self: flex-start;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded-full {
@@ -1237,6 +1317,10 @@ html, body {
   transition-duration: 300ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1459,6 +1543,18 @@ input:checked ~ .dot {
 
   .md\:h-96 {
     height: 24rem;
+  }
+
+  .md\:h-\[96px\] {
+    height: 96px;
+  }
+
+  .md\:h-\[72px\] {
+    height: 72px;
+  }
+
+  .md\:h-\[48px\] {
+    height: 48px;
   }
 
   .md\:w-1\/3 {

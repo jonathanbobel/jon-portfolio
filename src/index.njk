@@ -14,7 +14,24 @@ layout: base.njk
     <div class="text-center md:text-left">
       <h2 class="text-4xl md:text-6xl font-bold font-sans text-primary">
         Jonathan Bobel<br>
-        <span class="text-teal rotating-text" aria-live="polite" aria-atomic="true">Design Technologist</span>
+        <div class="relative h-[44px] md:h-[72px] overflow-hidden width-full m:w-[630px] text-teal">
+          <div id="rotating-text-visual" class="transition-transform flex flex-col duration-500 ease-in-out gap-8">
+            <div class="text-4xl md:text-6xl font-bold">Design Technologist</div>
+            <div class="text-4xl md:text-6xl font-bold">Frontend Developer</div>
+            <div class="text-4xl md:text-6xl font-bold">UI/UX Designer</div>
+            <div class="text-4xl md:text-6xl font-bold">Creative Coder</div>
+            <div class="text-4xl md:text-6xl font-bold">Interaction Designer</div>
+            <div class="text-4xl md:text-6xl font-bold">Jiu Jitsu Black Belt</div>
+            <div class="text-4xl md:text-6xl font-bold">Toddler Dad</div>
+            <div class="text-4xl md:text-6xl font-bold">Cycling Advocate</div>
+            <div class="text-4xl md:text-6xl font-bold">Outdoors Enthusiast</div>
+          </div>
+
+          <!-- Screen reader live region (visually hidden but still accessible) -->
+          <span id="rotating-text-accessible" class="sr-only" aria-live="polite" aria-atomic="true">
+            Design Technologist
+          </span>
+        </div>
       </h2>
       <p class="mt-4 text-lg md:text-2xl max-w-xl leading-relaxed">
         I design and code intuitive interfaces that make the web more accessible and enjoyable for everyone. My passion for human-centered design comes from being an outgoing, empathetic person — I strive to create experiences that work for people of all abilities. Want to connect? Just click <a href="/contact" class="text-teal underline">here</a>.
