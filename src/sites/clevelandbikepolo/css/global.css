@@ -1,0 +1,219 @@
+nav.navbar {
+  background: transparent;
+  transition: 0.3s;
+  border-bottom: 1px solid white;
+  text-align: center;
+  margin: 0;
+  height: 370px; }
+  @media screen and (max-width: 980px) {
+    nav.navbar {
+      height: auto;
+      position: relative !important;
+      background: #414547; }
+      nav.navbar a.navbar-brand {
+        margin: 0.8em 0 !important; }
+      nav.navbar .navbar-nav {
+        display: none; } }
+  nav.navbar p {
+    margin: 0;
+    line-height: 0.9; }
+    nav.navbar p.logo_top {
+      font-size: 48px; }
+    nav.navbar p.logo_bottom {
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      letter-spacing: 2.1px;
+      font-weight: 300; }
+  nav.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column; }
+  nav.navbar a.navbar-brand {
+    font-family: "Fjalla One", sans-serif;
+    color: #414547;
+    margin-left: 0 !important;
+    width: 800px;
+    height: auto;
+    float: none; }
+    @media screen and (max-width: 980px) {
+      nav.navbar a.navbar-brand {
+        width: 100%; } }
+    nav.navbar a.navbar-brand img {
+      width: 100%; }
+
+.navbar-nav {
+  list-style: none;
+  flex-grow: 1;
+  padding: 2em 0;
+  margin: 0; }
+  .navbar-nav li {
+    padding: 0 2em; }
+  .navbar-nav li a {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.4em;
+    font-weight: 300;
+    transition: 0.2s;
+    opacity: 0.6;
+    text-decoration: none; }
+    .navbar-nav li a:hover {
+      transition: 0.2s;
+      opacity: 1; }
+
+.navbar-nav li a.selected {
+  opacity: 1;
+  transition: 0.2s; }
+
+.navbar-nav li a:focus {
+  text-decoration: none;
+  outline: 0; }
+
+.navbar.top {
+  background: #414547;
+  transition: 0.3s;
+  height: 77px; }
+  @media screen and (max-width: 980px) {
+    .navbar.top {
+      height: auto; } }
+  .navbar.top a.navbar-brand {
+    background-size: 100%;
+    display: none; }
+    @media screen and (max-width: 980px) {
+      .navbar.top a.navbar-brand {
+        display: block; } }
+
+.navbar.top li a, .navbar.top a.navbar-brand {
+  color: white; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+  background: #666666; }
+
+h1 {
+  margin-bottom: 1em; }
+
+#main {
+  padding-top: 370px; }
+  @media screen and (max-width: 980px) {
+    #main {
+      padding-top: 0; }
+      #main .jumbotron.first .col img {
+        width: 50%;
+        margin: 0 25% 1em; }
+      #main .jumbotron.bio .col img {
+        width: 70%;
+        margin: 0 15% 1em; } }
+
+.jumbotron {
+  border-bottom: 1px solid #6c6c6a;
+  padding: 3em 0 2em;
+  background-color: #666666; }
+  @media screen and (max-width: 980px) {
+    .jumbotron {
+      padding: 1em 0;
+      margin-bottom: 0; } }
+  .jumbotron h1, .jumbotron h2, .jumbotron p {
+    color: white; }
+  .jumbotron h1 {
+    font-size: 3em;
+    font-family: "Fjalla One", sans-serif;
+    text-align: center;
+    padding: 0 1em; }
+    @media screen and (max-width: 980px) {
+      .jumbotron h1 {
+        font-size: 2em; } }
+  .jumbotron h2 {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 4em;
+    font-family: "Fjalla One", sans-serif;
+    margin-top: 0;
+    padding: 0 10px; }
+  .jumbotron a {
+    transition: 0.2s;
+    font-size: 1em;
+    color: #ffde58;
+    opacity: 1; }
+    .jumbotron a:hover {
+      opacity: 0.8;
+      text-decoration: none; }
+  .jumbotron p {
+    font-size: 1.6em;
+    font-family: "Open Sans", sans-serif; }
+    @media screen and (max-width: 980px) {
+      .jumbotron p {
+        font-size: 1em; } }
+  .jumbotron.first h1 {
+    margin-bottom: 2em; }
+  .jumbotron .col img {
+    width: 100%; }
+  .jumbotron#about {
+    margin-bottom: 0; }
+    @media screen and (max-width: 980px) {
+      .jumbotron#about {
+        display: none; } }
+  .jumbotron#footer {
+    border: 0;
+    padding: 0;
+    margin: 0 0 1em;
+    font-size: 0.6em; }
+
+iframe {
+  margin: 2em 0; }
+
+.mb-5 {
+  margin-bottom: 5em !important; }
+  @media screen and (max-width: 980px) {
+    .mb-5 {
+      margin-bottom: 0 !important; } }
+
+#contact .container .contact img {
+  width: 600px;
+  margin: 2em auto; }
+  @media screen and (max-width: 980px) {
+    #contact .container .contact img {
+      width: 100%; } }
+
+#contact .container .contact a {
+  font-size: 1em;
+  padding: 2px 0 10px;
+  opacity: 1;
+  transition: 1s; }
+  #contact .container .contact a:visited, #contact .container .contact a:focus {
+    text-decoration: none; }
+  #contact .container .contact a:hover {
+    opacity: 0.6; }
+
+#contact .container .contact p:last-child {
+  margin-bottom: 3em; }
+
+#contact .container .contact form label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-left: 0;
+  margin-bottom: 0;
+  text-align: left; }
+
+#contact .container .contact form input, #contact .container .contact form textarea {
+  font-family: "Open Sans", sans-serif;
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1); }
+  #contact .container .contact form input.ng-dirty, #contact .container .contact form textarea.ng-dirty {
+    background-color: white; }
+
+#contact .container .contact form button.btn {
+  background: #0c6482;
+  border-radius: 0;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  float: right; }
+
+#contact .container .contact p.result {
+  font-family: "Fjalla One", sans-serif; }

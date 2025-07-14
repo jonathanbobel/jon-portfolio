@@ -1,0 +1,875 @@
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+/* line 18, ../scss/_flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 21, ../scss/_flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url("/fonts/flexslider-icon.eot");
+  src: url("/fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("/fonts/flexslider-icon.woff") format("woff"), url("/fonts/flexslider-icon.ttf") format("truetype"), url("/fonts/flexslider-icon.svg#flexslider-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 39, ../scss/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 40, ../scss/_flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 41, ../scss/_flexslider.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 42, ../scss/_flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 45, ../scss/_flexslider.scss */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 46, ../scss/_flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 47, ../scss/_flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 52, ../scss/_flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 56, ../scss/_flexslider.scss */
+.flexslider {
+  margin: 0;
+  background: #fff;
+  /* border: 4px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); -moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); -o-box-shadow: 0 1px 4px rgba(0,0,0,.2); box-shadow: 0 1px 4px rgba(0,0,0,.2); */
+  zoom: 1;
+}
+
+/* line 57, ../scss/_flexslider.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 58, ../scss/_flexslider.scss */
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+/* line 59, ../scss/_flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 60, ../scss/_flexslider.scss */
+.carousel li {
+  margin-right: 5px;
+}
+
+/* line 61, ../scss/_flexslider.scss */
+.flexslider .slides li {
+  position: relative;
+}
+/* line 62, ../scss/_flexslider.scss */
+.flexslider .slides li .info {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 5%;
+  right: 5%;
+  color: white;
+  width: 40%;
+  padding: 6px 12px 8px;
+}
+/* line 63, ../scss/_flexslider.scss */
+.flexslider .slides li .info p {
+  margin-bottom: 0;
+}
+
+/* Direction Nav */
+/* line 68, ../scss/_flexslider.scss */
+.flex-direction-nav {
+  *height: 0;
+}
+
+/* line 69, ../scss/_flexslider.scss */
+.flex-direction-nav a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* line 70, ../scss/_flexslider.scss */
+.flex-direction-nav a {
+  width: 30px;
+  height: 26px;
+  margin: -20px 0 0;
+  display: block;
+  background: url(../img/bg_direction_nav.png) no-repeat 0 0;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  text-indent: -9999px;
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+}
+
+/* line 71, ../scss/_flexslider.scss */
+.flex-direction-nav .flex-prev {
+  left: -50px;
+}
+
+/* line 72, ../scss/_flexslider.scss */
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right;
+  background-position: center right;
+}
+
+/* line 73, ../scss/_flexslider.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+
+/* line 74, ../scss/_flexslider.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+
+/* line 75, ../scss/_flexslider.scss */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+
+/* line 76, ../scss/_flexslider.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0!important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+
+/* line 77, ../scss/_flexslider.scss */
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+}
+
+/* line 78, ../scss/_flexslider.scss */
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+
+/* Pause/Play */
+/* line 81, ../scss/_flexslider.scss */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+
+/* line 82, ../scss/_flexslider.scss */
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+
+/* line 83, ../scss/_flexslider.scss */
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+
+/* line 84, ../scss/_flexslider.scss */
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+
+/* Control Nav */
+/* line 87, ../scss/_flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+
+/* line 88, ../scss/_flexslider.scss */
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 89, ../scss/_flexslider.scss */
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 90, ../scss/_flexslider.scss */
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 91, ../scss/_flexslider.scss */
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+/* line 93, ../scss/_flexslider.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+
+/* line 94, ../scss/_flexslider.scss */
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+
+/* line 95, ../scss/_flexslider.scss */
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+}
+
+/* line 96, ../scss/_flexslider.scss */
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+
+/* line 97, ../scss/_flexslider.scss */
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 100, ../scss/_flexslider.scss */
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+
+  /* line 101, ../scss/_flexslider.scss */
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+/* HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* line 20, ../scss/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/* line 24, ../scss/main.scss */
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+/* line 35, ../scss/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/* line 40, ../scss/main.scss */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+/* line 49, ../scss/main.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+/* line 66, ../scss/main.scss */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/* line 74, ../scss/main.scss */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+/* line 84, ../scss/main.scss */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+/* line 92, ../scss/main.scss */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* Variables */
+/* line 113, ../scss/main.scss */
+a, a:visited {
+  color: #2ea2cc;
+  text-decoration: none;
+}
+/* line 114, ../scss/main.scss */
+a:hover, a:visited:hover {
+  text-decoration: underline;
+}
+
+/* line 116, ../scss/main.scss */
+h1, h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+/* line 117, ../scss/main.scss */
+body {
+  background-color: #FFF;
+}
+
+/* line 118, ../scss/main.scss */
+ul {
+  padding-left: 16px;
+  margin: 0 0 12px;
+}
+
+/* line 119, ../scss/main.scss */
+p {
+  margin: 0 0 12px;
+}
+
+/* line 121, ../scss/main.scss */
+#page {
+  width: 960px;
+  margin: 0 auto;
+  color: #000;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: #FFF;
+}
+/* line 123, ../scss/main.scss */
+#page header #logo {
+  width: 150px;
+  height: 150px;
+  margin: 12px auto;
+}
+/* line 124, ../scss/main.scss */
+#page header #logo img {
+  width: 150px;
+}
+/* line 126, ../scss/main.scss */
+#page header nav {
+  padding: 6px 0;
+  width: 100%;
+  border: 1px solid #e7e7e8;
+  border-left: 0;
+  border-right: 0;
+}
+/* line 127, ../scss/main.scss */
+#page header nav ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* line 128, ../scss/main.scss */
+#page header nav ul li {
+  line-height: 1;
+  display: inline-block;
+  width: 15%;
+  padding: 0 4.7%;
+  font-weight: 900;
+  text-align: center;
+  font-family: "Orbitron", Times, serif;
+  font-size: 1.2em;
+  color: #ff9e15;
+}
+/* line 129, ../scss/main.scss */
+#page header nav ul li a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 130, ../scss/main.scss */
+#page header nav ul li a:hover {
+  color: #ff9e15;
+}
+/* line 137, ../scss/main.scss */
+#page #main {
+  padding: 12px 0;
+  overflow: hidden;
+  min-height: 300px;
+}
+/* line 138, ../scss/main.scss */
+#page #main section {
+  padding: 10px 20px;
+}
+/* line 139, ../scss/main.scss */
+#page #main .google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+/* line 140, ../scss/main.scss */
+#page #main .google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+/* line 147, ../scss/main.scss */
+#page #main p.links {
+  margin: 0;
+}
+/* line 149, ../scss/main.scss */
+#page #content {
+  width: 65%;
+  margin-right: 5%;
+  float: left;
+}
+/* line 150, ../scss/main.scss */
+#page #sidebar {
+  width: 30%;
+  float: left;
+}
+/* line 151, ../scss/main.scss */
+#page #sidebar aside {
+  margin-bottom: 24px;
+}
+/* line 153, ../scss/main.scss */
+#page footer {
+  padding: 6px 0;
+  text-align: center;
+  margin-top: 0;
+  border-top: 1px solid #e7e7e8;
+  font-size: 0.8em;
+}
+/* line 154, ../scss/main.scss */
+#page footer p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 960px) {
+  /* line 159, ../scss/main.scss */
+  #page {
+    width: 100%;
+  }
+  /* line 162, ../scss/main.scss */
+  #page header nav ul li {
+    width: 15%;
+    font-size: 1em;
+    padding: 0 4.5%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 172, ../scss/main.scss */
+  #page header nav ul li {
+    font-size: 1em;
+    display: block;
+    padding: 1% 0;
+    width: 100%;
+  }
+  /* line 175, ../scss/main.scss */
+  #page .flexslider .slides li {
+    position: relative;
+  }
+  /* line 176, ../scss/main.scss */
+  #page .flexslider .slides li .info {
+    position: absolute;
+    font-size: 0.6em;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+  /* line 177, ../scss/main.scss */
+  #page .flexslider .slides li .info p {
+    margin-bottom: 0;
+  }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+/* line 191, ../scss/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+/* line 199, ../scss/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 210, ../scss/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 219, ../scss/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 236, ../scss/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+/* line 249, ../scss/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/* line 266, ../scss/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 271, ../scss/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 280, ../scss/main.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  /* line 307, ../scss/main.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 315, ../scss/main.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 319, ../scss/main.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 323, ../scss/main.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  /* line 333, ../scss/main.scss */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 338, ../scss/main.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 343, ../scss/main.scss */
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  /* line 348, ../scss/main.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 352, ../scss/main.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  /* line 362, ../scss/main.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 368, ../scss/main.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+.google_maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google_maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+#page #main section h1, #page #main section h2, #page #main section h3 {
+    text-align: center; 
+    font-weight: 200; 
+}
+#page #main section h1 {
+  font-weight: 400; 
+}
+#page #main section h3 {
+  margin: 24px 0; 
+  font-weight: 400; 
+}
+#page #main.proposal p, #page #main.proposal ul li {
+  font-weight: 200; 
+  font-size: 18px; 
+}
+#page #main.proposal ul {
+  list-style: none; 
+}

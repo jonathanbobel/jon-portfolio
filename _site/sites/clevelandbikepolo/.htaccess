@@ -1,0 +1,6 @@
+
+
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?clevelandbikepolo\.com
+RewriteRule ^(.*)$ https://www.clevelandbikepolo.com/$1 [R,L]
