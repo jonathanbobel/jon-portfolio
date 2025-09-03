@@ -29,3 +29,5 @@ Developed the **USAi.gov Console**, a comprehensive AI analytics and management 
 
 ## Impact
 The USAi Console helps government agencies make data-driven decisions about AI investments, monitor usage patterns, and ensure responsible AI deployment across federal organizations. The platform simplifies complex AI management tasks and provides the insights needed for strategic decision-making.
+
+
