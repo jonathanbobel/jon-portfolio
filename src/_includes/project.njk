@@ -6,9 +6,12 @@ title: "{{ title }}"
 <section class="py-32 bg-light flex items-center justify-center px-8">
   <div class="container mx-auto max-w-4xl">
     
-    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">{{ title }}</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans transition-all duration-300">{{ title }}</h1>
     
-    <img src="{{ image }}" alt="{{ title }} Screenshot" class="w-full shadow-lg my-8">
+    <div class="relative overflow-hidden rounded-lg shadow-lg my-8 transition-all duration-300 hover:shadow-xl">
+      <img src="{{ image }}" alt="{{ title }} Screenshot" class="w-full transition-transform duration-500 hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+    </div>
 
     <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">{{ description }}</p> -->
 
@@ -17,9 +20,14 @@ title: "{{ title }}"
     </article>
 
     {% if link %}
-      <a href="{{ link }}" class="mt-12 inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans text-xl">
-        Visit Project
-      </a>
+      <div class="mt-12">
+        <a href="{{ link }}" class="group inline-flex items-center bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 font-sans text-xl hover:bg-teal">
+          Visit Project
+          <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
     {% endif %}
 
   </div>

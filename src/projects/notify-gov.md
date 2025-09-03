@@ -4,10 +4,9 @@ description: "Designed and developed the Notify.gov platform, a secure governmen
 company: "Flexion (GSA 10x)"
 duration: "2022 - Present"
 technologies: ["D3.js", "USWDS", "WCAG 2.2", "JavaScript", "Figma"]
-link: "https://notify.gov"
 image: "/images/notify_landing.jpg"
 layout: "project.njk"
-order: 1
+order: 2
 ---
 
 ## Overview
@@ -20,6 +19,4 @@ Led front-end development and accessibility improvements for **Notify.gov**, a s
 - Conducted **accessibility audits** and automated checks in GitHub workflows.
 <!-- 
 ## Screenshots
-![Notify.gov Screenshot](/images/notify-gov-screenshot.jpg)
-
-[View Project](https://notify.gov) -->
+![Notify.gov Screenshot](/images/notify-gov-screenshot.jpg) -->

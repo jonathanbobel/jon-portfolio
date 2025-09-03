@@ -32,40 +32,57 @@ layout: base.njk
         border-color: #E25A28 !important;
         background-color: #fef7f0 !important;
     }
+    
+    /* Enhanced hover effects */
+    .enhanced-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .enhanced-card:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .enhanced-button {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .enhanced-button:hover:not(:disabled) {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
 </style>
 
 <section id="tour-de-lakewood-calculator" class="min-h-[calc(100vh-48px)] py-24 bg-light flex flex-col items-center justify-center px-8 space-y-8">
     <div class="text-center max-w-4xl">
-        <h1 class="text-4xl md:text-6xl font-bold text-primary font-sans mb-4">🚴‍♂️ Tour de Lakewood</h1>
-        <p class="text-lg text-dark/70 mb-8">Compare your Strava routes within Lakewood, OH</p>
+        <h1 class="text-4xl md:text-6xl font-bold text-primary font-sans mb-4 transition-all duration-300">🚴‍♂️ Tour de Lakewood</h1>
+        <p class="text-lg text-dark/70 mb-8 transition-colors duration-300 hover:text-dark">Compare your Strava routes within Lakewood, OH</p>
     </div>
 
-    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-8 space-y-6">
-        <div id="boundaryStatus" class="bg-teal/10 border border-teal/30 rounded-lg p-4 text-center text-sm text-teal">
+    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-8 space-y-6 enhanced-card">
+        <div id="boundaryStatus" class="bg-teal/10 border border-teal/30 rounded-lg p-4 text-center text-sm text-teal transition-all duration-300 hover:bg-teal/20">
             Loading Lakewood city boundary...
         </div>
         
-        <div id="fileInputContainer" class="border-4 border-dashed border-primary/40 rounded-xl p-12 text-center transition-all duration-300 cursor-pointer hover:border-primary hover:bg-primary/5">
-            <div class="text-lg text-primary font-medium mb-2">📁 Click to upload GPX files or drag & drop</div>
-            <div class="text-dark/60 text-sm">Select multiple GPX files to compare coverage</div>
+        <div id="fileInputContainer" class="border-4 border-dashed border-primary/40 rounded-xl p-12 text-center transition-all duration-300 cursor-pointer hover:border-primary hover:bg-primary/5 enhanced-card">
+            <div class="text-lg text-primary font-medium mb-2 transition-colors duration-300 hover:text-teal">📁 Click to upload GPX files or drag & drop</div>
+            <div class="text-dark/60 text-sm transition-colors duration-300 hover:text-dark">Select multiple GPX files to compare coverage</div>
             <input type="file" id="fileInput" accept=".gpx" multiple class="hidden">
         </div>
         
         <div id="fileList" class="space-y-3"></div>
         
-        <button id="analyzeBtn" disabled class="w-full bg-primary hover:bg-primary/90 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] disabled:hover:scale-100">
+        <button id="analyzeBtn" disabled class="w-full bg-primary hover:bg-primary/90 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 transform disabled:hover:scale-100 enhanced-button">
             Analyze Coverage
         </button>
     </div>
 
-    <div id="resultsSection" class="hidden w-full max-w-4xl bg-white rounded-2xl shadow-xl p-8">
-        <h2 class="text-2xl font-bold text-dark mb-6">Coverage Analysis Results</h2>
+    <div id="resultsSection" class="hidden w-full max-w-4xl bg-white rounded-2xl shadow-xl p-8 enhanced-card">
+        <h2 class="text-2xl font-bold text-dark mb-6 transition-all duration-300 hover:text-primary">Coverage Analysis Results</h2>
         <div id="results"></div>
     </div>
 
-    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-6">
-        <h2 class="text-2xl font-bold text-dark mb-6">Map Visualization</h2>
-        <div id="map" class="rounded-lg overflow-hidden border border-gray-200"></div>
+    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-xl p-6 enhanced-card">
+        <h2 class="text-2xl font-bold text-dark mb-6 transition-all duration-300 hover:text-primary">Map Visualization</h2>
+        <div id="map" class="rounded-lg overflow-hidden border border-gray-200 transition-all duration-300 hover:border-primary/50"></div>
     </div>
 </section>
 
@@ -116,7 +133,7 @@ layout: base.njk
     async function initMap() {
         const statusEl = document.getElementById('boundaryStatus');
         statusEl.innerHTML = "✅ Using hand-traced Lakewood city boundary";
-        statusEl.className = "bg-teal/10 border border-teal/30 rounded-lg p-4 text-center text-sm text-teal";
+        statusEl.className = "bg-teal/10 border border-teal/30 rounded-lg p-4 text-center text-sm text-teal transition-all duration-300 hover:bg-teal/20";
         
         map = L.map('map').setView([41.4856, -81.8017], 13);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -170,10 +187,10 @@ layout: base.njk
         
         files.forEach((file, index) => {
             const fileItem = document.createElement('div');
-            fileItem.className = 'flex items-center justify-between p-4 bg-accent/20 rounded-lg border-l-4 border-primary';
+            fileItem.className = 'flex items-center justify-between p-4 bg-accent/20 rounded-lg border-l-4 border-primary transition-all duration-300 hover:bg-accent/30 enhanced-card';
             fileItem.innerHTML = `
-                <div class="font-medium text-dark">${file.name}</div>
-                <button onclick="removeFile(${index})" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm transition-colors">
+                <div class="font-medium text-dark transition-colors duration-300 hover:text-primary">${file.name}</div>
+                <button onclick="removeFile(${index})" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm transition-all duration-300 enhanced-button">
                     Remove
                 </button>
             `;
@@ -295,15 +312,15 @@ layout: base.njk
         let html = '';
         
         if (winner) {
-            html += `<div class="bg-green-100 border border-green-300 text-green-800 p-6 rounded-lg text-center text-lg font-medium mb-6">
+            html += `<div class="bg-green-100 border border-green-300 text-green-800 p-6 rounded-lg text-center text-lg font-medium mb-6 transition-all duration-300 hover:bg-green-200 enhanced-card">
                 🏆 Winner: ${winner.name} with ${winner.distance.toFixed(2)} miles of coverage in Lakewood!
             </div>`;
         }
 
         analysisResults.forEach(result => {
             html += `
-                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg mb-4 border-l-4" style="border-left-color: ${result.color};">
-                    <div class="font-medium text-dark" style="color: ${result.color};">${result.name}</div>
+                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg mb-4 border-l-4 transition-all duration-300 hover:bg-gray-100 enhanced-card" style="border-left-color: ${result.color};">
+                    <div class="font-medium text-dark transition-colors duration-300 hover:text-primary" style="color: ${result.color};">${result.name}</div>
                     <div class="flex gap-6 text-sm text-dark/70">
                         <div class="text-center">
                             <div class="font-bold text-lg text-primary">${result.distance.toFixed(2)}</div>

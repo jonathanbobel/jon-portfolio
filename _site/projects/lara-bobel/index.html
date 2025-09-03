@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lara Bobel - Portfolio - Jonathan Bobel</title>
+  <title>Lara Bobel - Jonathan Bobel</title>
   <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -14,16 +14,55 @@
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link href="/css/tailwind.output.css" rel="stylesheet">
+  
+  <style>
+    /* Enhanced focus styles for keyboard navigation */
+    *:focus {
+      outline: 2px solid #E25A28;
+      outline-offset: 2px;
+    }
+    
+    /* Remove default focus outline for mouse users */
+    *:focus:not(:focus-visible) {
+      outline: none;
+    }
+    
+    /* Enhanced focus styles for interactive elements */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #E25A28;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    
+    /* Special focus styles for navigation */
+    nav a:focus-visible {
+      outline: 3px solid #1C8282;
+      outline-offset: 3px;
+    }
+    
+    /* Focus styles for form elements */
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #E25A28;
+      outline-offset: 3px;
+      border-color: #E25A28;
+    }
+  </style>
 </head>
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 <div id="tsparticles"></div>
+
   <!-- Navbar -->
   <nav class="bg-light fixed top-0 left-0 w-full z-50 font-sans">
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
-    <h1 class="text-3xl font-bold">
+    <a href="/" class="text-3xl font-bold hover:text-primary transition-colors duration-300">
       Jonathan Bobel
-    </h1>
+    </a>
 
     <!-- Hamburger / X Toggle Button -->
     <button id="menu-btn"
@@ -34,14 +73,8 @@
       <span class="w-8 h-1 bg-dark transition-all duration-300 ease-in-out origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-2"></span>
     </button>
 
-
     <!-- Navigation Links -->
     <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
-      <li>
-        <a href="/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
-          Home
-        </a>
-      </li>
       <li>
         <a href="/about/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
           About
@@ -60,12 +93,9 @@
     </ul>
   </div>
 
-   
-
   <!-- Mobile Slide-in Menu -->
   <div id="mobile-menu"
       class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-light text-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-40 flex flex-col space-y-6 p-6">
-    <a href="/" class="text-xl hover:text-teal">Home</a>
     <a href="/about/" class="text-xl hover:text-teal">About</a>
     <a href="/projects/" class="text-xl hover:text-teal">Projects</a>
     <a href="/contact/" class="text-xl hover:text-teal">Contact</a>
@@ -82,11 +112,14 @@
 <section class="py-32 bg-light flex items-center justify-center px-8">
   <div class="container mx-auto max-w-4xl">
     
-    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">Lara Bobel - Portfolio</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans transition-all duration-300">Lara Bobel</h1>
     
-    <img src="/images/lara_bobel.jpg" alt="Lara Bobel - Portfolio Screenshot" class="w-full shadow-lg my-8">
+    <div class="relative overflow-hidden rounded-lg shadow-lg my-8 transition-all duration-300 hover:shadow-xl">
+      <img src="/images/lara_bobel.jpg" alt="Lara Bobel Screenshot" class="w-full transition-transform duration-500 hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+    </div>
 
-    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Portfolio site for Lara Bobel. Written in AngularJS.</p> -->
+    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Designed and developed a personal portfolio website for Lara Bobel, showcasing her work and professional experience. Created a modern, responsive design that effectively presents her skills and projects.</p> -->
 
     <article class="mt-12 text-left prose prose-lg text-dark text-xl">
       <h2>Overview</h2>
@@ -95,9 +128,14 @@
     </article>
 
     
-      <a href="https://larabobel.com" class="mt-12 inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans text-xl">
-        Visit Project
-      </a>
+      <div class="mt-12">
+        <a href="https://larabobel.com" class="group inline-flex items-center bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 font-sans text-xl hover:bg-teal">
+          Visit Project
+          <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
     
 
   </div>
@@ -113,7 +151,6 @@
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
-  
   
 
 </body>

@@ -14,16 +14,55 @@
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link href="/css/tailwind.output.css" rel="stylesheet">
+  
+  <style>
+    /* Enhanced focus styles for keyboard navigation */
+    *:focus {
+      outline: 2px solid #E25A28;
+      outline-offset: 2px;
+    }
+    
+    /* Remove default focus outline for mouse users */
+    *:focus:not(:focus-visible) {
+      outline: none;
+    }
+    
+    /* Enhanced focus styles for interactive elements */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #E25A28;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    
+    /* Special focus styles for navigation */
+    nav a:focus-visible {
+      outline: 3px solid #1C8282;
+      outline-offset: 3px;
+    }
+    
+    /* Focus styles for form elements */
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #E25A28;
+      outline-offset: 3px;
+      border-color: #E25A28;
+    }
+  </style>
 </head>
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 <div id="tsparticles"></div>
+
   <!-- Navbar -->
   <nav class="bg-light fixed top-0 left-0 w-full z-50 font-sans">
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
-    <h1 class="text-3xl font-bold">
+    <a href="/" class="text-3xl font-bold hover:text-primary transition-colors duration-300">
       Jonathan Bobel
-    </h1>
+    </a>
 
     <!-- Hamburger / X Toggle Button -->
     <button id="menu-btn"
@@ -34,14 +73,8 @@
       <span class="w-8 h-1 bg-dark transition-all duration-300 ease-in-out origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-2"></span>
     </button>
 
-
     <!-- Navigation Links -->
     <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
-      <li>
-        <a href="/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
-          Home
-        </a>
-      </li>
       <li>
         <a href="/about/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
           About
@@ -60,12 +93,9 @@
     </ul>
   </div>
 
-   
-
   <!-- Mobile Slide-in Menu -->
   <div id="mobile-menu"
       class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-light text-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-40 flex flex-col space-y-6 p-6">
-    <a href="/" class="text-xl hover:text-teal">Home</a>
     <a href="/about/" class="text-xl hover:text-teal">About</a>
     <a href="/projects/" class="text-xl hover:text-teal">Projects</a>
     <a href="/contact/" class="text-xl hover:text-teal">Contact</a>
@@ -93,52 +123,171 @@
     <!-- Right Column: Project List -->
     <div class="flex flex-col gap-24 md:w-2/3 max-w-2xl" id="projectList">
       
-      <div class="flex flex-col items-left text-center md:text-left">
-        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">Notify.gov</h3>
-        <img src="/images/notify_landing.jpg" alt="Notify.gov Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">Designed and developed the Notify.gov platform, a secure government messaging service. Led branding, front-end development, and accessibility improvements, ensuring compliance with WCAG 2.2 and the U.S. Web Design System (USWDS). Built data visualizations with D3.js to enhance insights.</p>
-        <a href="/projects/notify-gov/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      <div class="project-card group">
+        <a href="/projects/usai-gov/" class="block w-full h-full">
+          <div class="flex flex-col items-left text-center md:text-left transition-all duration-300 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer">
+            <h3 class="text-3xl font-sans font-semibold text-dark mb-4 transition-colors duration-300 group-hover:text-primary">USAi.gov</h3>
+            <div class="project-image-container relative overflow-hidden rounded-lg shadow-lg mb-4 transition-all duration-300">
+              <img src="/images/usai_gov_screenshot.png" alt="USAi.gov Screenshot" class="w-full transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+            </div>
+            <p class="text-xl text-gray-700 mt-2 mb-2 transition-colors duration-300 group-hover:text-dark">Developed the USAi.gov Console platform, a unified AI analytics and management system for government agencies. Built real-time dashboards, cost tracking, and model evaluation tools to help agencies optimize AI investments and ensure responsible adoption.</p>
+            <div class="inline-flex items-center text-primary font-sans text-xl font-bold mt-2 transition-all duration-300 group-hover:text-teal">
+              View Project
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
       
-      <div class="flex flex-col items-left text-center md:text-left">
-        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">Primary Design System</h3>
-        <img src="/images/primary_screenshot.png" alt="Primary Design System Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">Primary is a modular design system I originally built to support a large-scale enterprise design and development team. While the original version was created during my time at a Fortune 500 company, this iteration strips away proprietary branding to focus on reusable components, accessibility, and a scalable visual language.</p>
-        <a href="/projects/primary-ds/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      <div class="project-card group">
+        <a href="/projects/notify-gov/" class="block w-full h-full">
+          <div class="flex flex-col items-left text-center md:text-left transition-all duration-300 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer">
+            <h3 class="text-3xl font-sans font-semibold text-dark mb-4 transition-colors duration-300 group-hover:text-primary">Notify.gov</h3>
+            <div class="project-image-container relative overflow-hidden rounded-lg shadow-lg mb-4 transition-all duration-300">
+              <img src="/images/notify_landing.jpg" alt="Notify.gov Screenshot" class="w-full transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+            </div>
+            <p class="text-xl text-gray-700 mt-2 mb-2 transition-colors duration-300 group-hover:text-dark">Designed and developed the Notify.gov platform, a secure government messaging service. Led branding, front-end development, and accessibility improvements, ensuring compliance with WCAG 2.2 and the U.S. Web Design System (USWDS). Built data visualizations with D3.js to enhance insights.</p>
+            <div class="inline-flex items-center text-primary font-sans text-xl font-bold mt-2 transition-all duration-300 group-hover:text-teal">
+              View Project
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
       
-      <div class="flex flex-col items-left text-center md:text-left">
-        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">US Web Design System - Inclusive Design Patterns</h3>
-        <img src="/images/uswds_patterns.jpg" alt="US Web Design System - Inclusive Design Patterns Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">I worked as a front-end developer, UX designer, and researcher on a project focused on creating design patterns for the U.S. Web Design System (USWDS) that emphasize diversity, equity, and inclusion (DEI). These patterns serve as frameworks for creating inclusive and accessible digital experiences, integrating key considerations from user research and accessibility guidelines. My role involved contributing to the design and development of patterns that ensure digital experiences are equitable, reflecting diverse user needs and real-world experiences.</p>
-        <a href="/projects/USWDS/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      <div class="project-card group">
+        <a href="/projects/primary-ds/" class="block w-full h-full">
+          <div class="flex flex-col items-left text-center md:text-left transition-all duration-300 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer">
+            <h3 class="text-3xl font-sans font-semibold text-dark mb-4 transition-colors duration-300 group-hover:text-primary">Primary Design System</h3>
+            <div class="project-image-container relative overflow-hidden rounded-lg shadow-lg mb-4 transition-all duration-300">
+              <img src="/images/primary_screenshot.png" alt="Primary Design System Screenshot" class="w-full transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+            </div>
+            <p class="text-xl text-gray-700 mt-2 mb-2 transition-colors duration-300 group-hover:text-dark">Led the development of a comprehensive design system for Primary, a fintech startup. Created reusable components, established design patterns, and built a component library that improved development efficiency and design consistency across the platform.</p>
+            <div class="inline-flex items-center text-primary font-sans text-xl font-bold mt-2 transition-all duration-300 group-hover:text-teal">
+              View Project
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
       
-      <div class="flex flex-col items-left text-center md:text-left">
-        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">10x.gsa.gov</h3>
-        <img src="/images/10x_impact.jpg" alt="10x.gsa.gov Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">Led the development and assisted in the design of a reimagined 10x.gsa.gov, a platform for federal innovation funding, improving usability, accessibility, and information flow. Applied design thinking &amp; agile methodologies to revamp the site while maintaining USWDS consistency and meeting WCAG 2.2 standards.</p>
-        <a href="/projects/10x-redesign/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      <div class="project-card group">
+        <a href="/projects/USWDS/" class="block w-full h-full">
+          <div class="flex flex-col items-left text-center md:text-left transition-all duration-300 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer">
+            <h3 class="text-3xl font-sans font-semibold text-dark mb-4 transition-colors duration-300 group-hover:text-primary">U.S. Web Design System</h3>
+            <div class="project-image-container relative overflow-hidden rounded-lg shadow-lg mb-4 transition-all duration-300">
+              <img src="/images/uswds_patterns.jpg" alt="U.S. Web Design System Screenshot" class="w-full transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+            </div>
+            <p class="text-xl text-gray-700 mt-2 mb-2 transition-colors duration-300 group-hover:text-dark">Contributed to the U.S. Web Design System (USWDS), the official design system for federal government websites. Developed components, improved accessibility, and helped establish design standards used across thousands of government sites.</p>
+            <div class="inline-flex items-center text-primary font-sans text-xl font-bold mt-2 transition-all duration-300 group-hover:text-teal">
+              View Project
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
       
-      <div class="flex flex-col items-left text-center md:text-left">
-        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">Antidote Therapies</h3>
-        <img src="/images/antidote.jpg" alt="Antidote Therapies Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">Parallax site for Antidote Functional Therapies</p>
-        <a href="/projects/antidote/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      <div class="project-card group">
+        <a href="/projects/10x-redesign/" class="block w-full h-full">
+          <div class="flex flex-col items-left text-center md:text-left transition-all duration-300 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer">
+            <h3 class="text-3xl font-sans font-semibold text-dark mb-4 transition-colors duration-300 group-hover:text-primary">10x.gov Redesign</h3>
+            <div class="project-image-container relative overflow-hidden rounded-lg shadow-lg mb-4 transition-all duration-300">
+              <img src="/images/10x_impact.jpg" alt="10x.gov Redesign Screenshot" class="w-full transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+            </div>
+            <p class="text-xl text-gray-700 mt-2 mb-2 transition-colors duration-300 group-hover:text-dark">Led the redesign of 10x.gov, a government innovation platform. Improved user experience, enhanced accessibility, and modernized the interface while maintaining the platform&#39;s mission of funding innovative government projects.</p>
+            <div class="inline-flex items-center text-primary font-sans text-xl font-bold mt-2 transition-all duration-300 group-hover:text-teal">
+              View Project
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
       
-      <div class="flex flex-col items-left text-center md:text-left">
-        <h3 class="text-3xl font-sans font-semibold text-dark mb-4">Lara Bobel - Portfolio</h3>
-        <img src="/images/lara_bobel.jpg" alt="Lara Bobel - Portfolio Screenshot" class="w-full mb-4 border-2">
-        <p class="text-xl text-gray-700 mt-2 mb-2">Portfolio site for Lara Bobel. Written in AngularJS.</p>
-        <a href="/projects/lara-bobel/" class="text-primary font-sans text-xl font-bold hover:underline mt-2">View Project</a>
+      <div class="project-card group">
+        <a href="/projects/antidote/" class="block w-full h-full">
+          <div class="flex flex-col items-left text-center md:text-left transition-all duration-300 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer">
+            <h3 class="text-3xl font-sans font-semibold text-dark mb-4 transition-colors duration-300 group-hover:text-primary">Antidote</h3>
+            <div class="project-image-container relative overflow-hidden rounded-lg shadow-lg mb-4 transition-all duration-300">
+              <img src="/images/antidote.jpg" alt="Antidote Screenshot" class="w-full transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+            </div>
+            <p class="text-xl text-gray-700 mt-2 mb-2 transition-colors duration-300 group-hover:text-dark">Designed and developed the Antidote platform, a comprehensive solution for managing and tracking medical supplies and equipment. Created an intuitive interface for healthcare professionals to monitor inventory and ensure patient safety.</p>
+            <div class="inline-flex items-center text-primary font-sans text-xl font-bold mt-2 transition-all duration-300 group-hover:text-teal">
+              View Project
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="project-card group">
+        <a href="/projects/lara-bobel/" class="block w-full h-full">
+          <div class="flex flex-col items-left text-center md:text-left transition-all duration-300 p-8 rounded-2xl bg-white shadow-lg hover:shadow-xl cursor-pointer">
+            <h3 class="text-3xl font-sans font-semibold text-dark mb-4 transition-colors duration-300 group-hover:text-primary">Lara Bobel</h3>
+            <div class="project-image-container relative overflow-hidden rounded-lg shadow-lg mb-4 transition-all duration-300">
+              <img src="/images/lara_bobel.jpg" alt="Lara Bobel Screenshot" class="w-full transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300"></div>
+            </div>
+            <p class="text-xl text-gray-700 mt-2 mb-2 transition-colors duration-300 group-hover:text-dark">Designed and developed a personal portfolio website for Lara Bobel, showcasing her work and professional experience. Created a modern, responsive design that effectively presents her skills and projects.</p>
+            <div class="inline-flex items-center text-primary font-sans text-xl font-bold mt-2 transition-all duration-300 group-hover:text-teal">
+              View Project
+              <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
       
       
     </div>
   </div>
-</section>  
+</section>
+
+<style>
+  .project-card:hover .project-image-container img {
+    transform: scale(1.05);
+  }
+  
+  .project-card:hover .project-image-container .absolute {
+    opacity: 1;
+  }
+  
+  /* Ensure the entire card is clickable */
+  .project-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Remove focus outline from the card wrapper since the link handles focus */
+  .project-card:focus {
+    outline: none;
+  }
+  
+  /* Ensure the link gets proper focus styles */
+  .project-card a:focus-visible {
+    outline: 3px solid #E25A28;
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+</style>  
   </main>
 
   <!-- Footer -->
@@ -150,7 +299,6 @@
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
-  
   
 
 </body>

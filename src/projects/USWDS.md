@@ -1,13 +1,13 @@
 ---
-title: "US Web Design System - Inclusive Design Patterns"
-description: "I worked as a front-end developer, UX designer, and researcher on a project focused on creating design patterns for the U.S. Web Design System (USWDS) that emphasize diversity, equity, and inclusion (DEI). These patterns serve as frameworks for creating inclusive and accessible digital experiences, integrating key considerations from user research and accessibility guidelines. My role involved contributing to the design and development of patterns that ensure digital experiences are equitable, reflecting diverse user needs and real-world experiences."
-company: "US Web Design System"
-duration: "2023"
-technologies: ["USWDS", "JavaScript", "WCAG 2.2", "Design Thinking", "Accessibility"]
-link: "https://designsystem.digital.gov/patterns/"
+title: "U.S. Web Design System"
+description: "Contributed to the U.S. Web Design System (USWDS), the official design system for federal government websites. Developed components, improved accessibility, and helped establish design standards used across thousands of government sites."
+company: "GSA"
+duration: "2022 - Present"
+technologies: ["React", "TypeScript", "USWDS", "Accessibility", "Design Systems"]
+link: "https://designsystem.digital.gov"
 image: "/images/uswds_patterns.jpg"
 layout: "project.njk"
-order: 3
+order: 4
 ---
 
 ## Overview

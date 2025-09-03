@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const phrases = visual.children;
   const total = phrases.length;
+  const originalCount = 9; // Number of original items (before duplicates)
   let currentIndex = 0;
   let offsets = [];
 
@@ -73,7 +74,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(() => {
       currentIndex = (currentIndex + 1) % total;
-      visual.style.transform = `translateY(-${offsets[currentIndex]}px)`;
+      
+      // If we're at a duplicated item, jump back to the original
+      if (currentIndex >= originalCount) {
+        // Jump back to the beginning seamlessly
+        currentIndex = currentIndex - originalCount;
+        // Update transform without animation for seamless jump
+        visual.style.transition = 'none';
+        visual.style.transform = `translateY(-${offsets[currentIndex]}px)`;
+        // Re-enable animation after the jump
+        requestAnimationFrame(() => {
+          visual.style.transition = 'transform 500ms ease-in-out';
+        });
+      } else {
+        // Normal transition
+        visual.style.transform = `translateY(-${offsets[currentIndex]}px)`;
+      }
+      
       accessible.textContent = phrases[currentIndex].textContent;
     }, 5000);
   });
@@ -99,5 +116,4 @@ document.addEventListener('DOMContentLoaded', function() {
       uhcToggle.checked = true;
     }
   }
-
 });

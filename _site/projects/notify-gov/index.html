@@ -14,16 +14,55 @@
   <link rel="stylesheet" href="/css/tailwind.output.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link href="/css/tailwind.output.css" rel="stylesheet">
+  
+  <style>
+    /* Enhanced focus styles for keyboard navigation */
+    *:focus {
+      outline: 2px solid #E25A28;
+      outline-offset: 2px;
+    }
+    
+    /* Remove default focus outline for mouse users */
+    *:focus:not(:focus-visible) {
+      outline: none;
+    }
+    
+    /* Enhanced focus styles for interactive elements */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #E25A28;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    
+    /* Special focus styles for navigation */
+    nav a:focus-visible {
+      outline: 3px solid #1C8282;
+      outline-offset: 3px;
+    }
+    
+    /* Focus styles for form elements */
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid #E25A28;
+      outline-offset: 3px;
+      border-color: #E25A28;
+    }
+  </style>
 </head>
 <body class="flex flex-col min-h-screen bg-light text-dark font-sans" onload="document.body.classList.remove('opacity-0')">
 <div id="tsparticles"></div>
+
   <!-- Navbar -->
   <nav class="bg-light fixed top-0 left-0 w-full z-50 font-sans">
   <div class="container max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
-    <h1 class="text-3xl font-bold">
+    <a href="/" class="text-3xl font-bold hover:text-primary transition-colors duration-300">
       Jonathan Bobel
-    </h1>
+    </a>
 
     <!-- Hamburger / X Toggle Button -->
     <button id="menu-btn"
@@ -34,14 +73,8 @@
       <span class="w-8 h-1 bg-dark transition-all duration-300 ease-in-out origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-2"></span>
     </button>
 
-
     <!-- Navigation Links -->
     <ul id="menu" class="hidden md:flex space-x-6 text-2xl font-bold">
-      <li>
-        <a href="/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
-          Home
-        </a>
-      </li>
       <li>
         <a href="/about/" class="relative hover:before:scale-x-100 before:absolute before:bottom-[-4px] before:left-0 before:w-full before:h-[4px] before:bg-teal before:scale-x-0 before:origin-left before:transition-transform before:duration-300">
           About
@@ -60,12 +93,9 @@
     </ul>
   </div>
 
-   
-
   <!-- Mobile Slide-in Menu -->
   <div id="mobile-menu"
       class="fixed top-0 right-0 h-full w-3/4 max-w-sm bg-light text-dark transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-40 flex flex-col space-y-6 p-6">
-    <a href="/" class="text-xl hover:text-teal">Home</a>
     <a href="/about/" class="text-xl hover:text-teal">About</a>
     <a href="/projects/" class="text-xl hover:text-teal">Projects</a>
     <a href="/contact/" class="text-xl hover:text-teal">Contact</a>
@@ -82,9 +112,12 @@
 <section class="py-32 bg-light flex items-center justify-center px-8">
   <div class="container mx-auto max-w-4xl">
     
-    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans">Notify.gov</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans transition-all duration-300">Notify.gov</h1>
     
-    <img src="/images/notify_landing.jpg" alt="Notify.gov Screenshot" class="w-full shadow-lg my-8">
+    <div class="relative overflow-hidden rounded-lg shadow-lg my-8 transition-all duration-300 hover:shadow-xl">
+      <img src="/images/notify_landing.jpg" alt="Notify.gov Screenshot" class="w-full transition-transform duration-500 hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+    </div>
 
     <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Designed and developed the Notify.gov platform, a secure government messaging service. Led branding, front-end development, and accessibility improvements, ensuring compliance with WCAG 2.2 and the U.S. Web Design System (USWDS). Built data visualizations with D3.js to enhance insights.</p> -->
 
@@ -100,15 +133,9 @@
 </ul>
 <!-- 
 ## Screenshots
-![Notify.gov Screenshot](/images/notify-gov-screenshot.jpg)
-
-[View Project](https://notify.gov) -->
+![Notify.gov Screenshot](/images/notify-gov-screenshot.jpg) -->
     </article>
 
-    
-      <a href="https://notify.gov" class="mt-12 inline-block bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-md hover:bg-opacity-90 transition duration-300 font-sans text-xl">
-        Visit Project
-      </a>
     
 
   </div>
@@ -124,7 +151,6 @@
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
-  
   
 
 </body>

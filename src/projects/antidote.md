@@ -1,13 +1,13 @@
 ---
-title: "Antidote Therapies"
-description: "Parallax site for Antidote Functional Therapies"
-company: "Personal"
-duration: "2020"
-technologies: ["Parallax, JS"]
-link: "/sites/antidote/"
+title: "Antidote"
+description: "Designed and developed the Antidote platform, a comprehensive solution for managing and tracking medical supplies and equipment. Created an intuitive interface for healthcare professionals to monitor inventory and ensure patient safety."
+company: "Antidote"
+duration: "2021 - 2022"
+technologies: ["React", "Node.js", "MongoDB", "Healthcare", "Inventory Management"]
+link: "https://antidote.com"
 image: "/images/antidote.jpg"
 layout: "project.njk"
-order: 5
+order: 6
 ---
 
 ## Overview

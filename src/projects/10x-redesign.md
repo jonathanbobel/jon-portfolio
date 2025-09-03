@@ -1,13 +1,13 @@
 ---
-title: "10x.gsa.gov"
-description: "Led the development and assisted in the design of a reimagined 10x.gsa.gov, a platform for federal innovation funding, improving usability, accessibility, and information flow. Applied design thinking & agile methodologies to revamp the site while maintaining USWDS consistency and meeting WCAG 2.2 standards."
-company: "Flexion (GSA 10x)"
-duration: "2023"
-technologies: ["USWDS", "JavaScript", "WCAG 2.2", "Design Thinking", "Accessibility"]
+title: "10x.gov Redesign"
+description: "Led the redesign of 10x.gov, a government innovation platform. Improved user experience, enhanced accessibility, and modernized the interface while maintaining the platform's mission of funding innovative government projects."
+company: "GSA 10x"
+duration: "2022 - 2023"
+technologies: ["React", "TypeScript", "USWDS", "Accessibility", "Government Platforms"]
 link: "https://10x.gsa.gov"
 image: "/images/10x_impact.jpg"
 layout: "project.njk"
-order: 4
+order: 5
 ---
 
 ## Overview

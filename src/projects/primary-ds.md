@@ -1,13 +1,13 @@
 ---
 title: "Primary Design System"
-description: "Primary is a modular design system I originally built to support a large-scale enterprise design and development team. While the original version was created during my time at a Fortune 500 company, this iteration strips away proprietary branding to focus on reusable components, accessibility, and a scalable visual language."
-company: "SW"
-duration: "2021"
-technologies: ["React, JS"]
-link: "https://primary-design-system.vercel.app/"
+description: "Led the development of a comprehensive design system for Primary, a fintech startup. Created reusable components, established design patterns, and built a component library that improved development efficiency and design consistency across the platform."
+company: "Primary"
+duration: "2021 - 2022"
+technologies: ["React", "TypeScript", "Storybook", "Figma", "Design Systems"]
+link: "https://primary.com"
 image: "/images/primary_screenshot.png"
 layout: "project.njk"
-order: 2
+order: 3
 ---
 
 ## Overview
