@@ -102,18 +102,4 @@ document.addEventListener('DOMContentLoaded', function() {
     visual.style.transform = `translateY(-${offsets[currentIndex]}px)`;
   });
 
-  const uhcToggle = document.getElementById('uhc-toggle');
-
-  if (uhcToggle) {
-    uhcToggle.addEventListener('change', () => {
-      document.body.classList.toggle('uhc', uhcToggle.checked);
-      localStorage.setItem('uhcMode', uhcToggle.checked ? 'on' : 'off');
-    });
-  
-    // On page load
-    if (localStorage.getItem('uhcMode') === 'on') {
-      document.body.classList.add('uhc');
-      uhcToggle.checked = true;
-    }
-  }
 });

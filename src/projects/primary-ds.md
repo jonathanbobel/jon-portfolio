@@ -1,6 +1,6 @@
 ---
 title: "Primary Design System"
-description: "Led the development of a comprehensive design system for Primary, a fintech startup. Created reusable components, established design patterns, and built a component library that improved development efficiency and design consistency across the platform."
+description: "Led the development of Primary, a comprehensive design system for a Fortune 500 company. Created reusable components, established design patterns, and built a component library that improved development efficiency and design consistency across the platform."
 company: "Primary"
 duration: "2021 - 2022"
 technologies: ["React", "TypeScript", "Storybook", "Figma", "Design Systems"]
