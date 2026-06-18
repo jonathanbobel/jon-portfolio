@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - Jonathan Bobel</title>
+  <title>Tour de Lakewood - Jonathan Bobel</title>
   <link rel="preload" href="/fonts/Raleway-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="/fonts/Raleway-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -111,45 +111,49 @@
 
   <main class="flex-grow container mx-auto max-w-6xl animate-fadeIn animation-fill-forwards">
     
-<section class="min-h-[calc(100vh-48px)] py-32 bg-transparent flex items-center justify-center px-5">
-  <div class="container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-center gap-14 h-full">    
-    <!-- Image -->
-    <img src="/images/me.jpg" alt="Jonathan Bobel" 
-      class="border-8 border-primary w-80 h-80 md:w-96 md:h-96 rounded-full shadow-lg 
-             transform transition-transform duration-200 ease-in-out hover:scale-110">
+<section class="py-32 bg-light flex items-center justify-center px-8">
+  <div class="container mx-auto max-w-4xl">
     
-    <!-- Text -->
-    <div class="text-center md:text-left">
-      <h2 class="text-4xl md:text-6xl font-bold font-sans text-primary">
-        Jonathan Bobel<br>
-        <div class="relative h-[44px] md:h-[72px] overflow-hidden width-full m:w-[630px] text-teal">
-          <div id="rotating-text-visual" class="transition-transform flex flex-col duration-500 ease-in-out gap-8">
-            <div class="text-4xl md:text-6xl font-bold">Design Technologist</div>
-            <div class="text-4xl md:text-6xl font-bold">Frontend Developer</div>
-            <div class="text-4xl md:text-6xl font-bold">UI/UX Designer</div>
-            <div class="text-4xl md:text-6xl font-bold">Creative Coder</div>
-            <div class="text-4xl md:text-6xl font-bold">Interaction Designer</div>
-            <div class="text-4xl md:text-6xl font-bold">Jiu Jitsu Black Belt</div>
-            <div class="text-4xl md:text-6xl font-bold">Toddler Dad</div>
-            <div class="text-4xl md:text-6xl font-bold">Cycling Advocate</div>
-            <div class="text-4xl md:text-6xl font-bold">Outdoors Enthusiast</div>
-            <!-- Duplicate first few items for seamless loop -->
-            <div class="text-4xl md:text-6xl font-bold">Design Technologist</div>
-            <div class="text-4xl md:text-6xl font-bold">Frontend Developer</div>
-            <div class="text-4xl md:text-6xl font-bold">UI/UX Designer</div>
-          </div>
-
-          <!-- Screen reader live region (visually hidden but still accessible) -->
-          <span id="rotating-text-accessible" class="sr-only" aria-live="polite" aria-atomic="true">
-            Design Technologist
-          </span>
-        </div>
-      </h2>
-      <p class="mt-4 text-lg md:text-2xl max-w-xl leading-relaxed">
-        I design and code intuitive interfaces that make the web more accessible and enjoyable for everyone. My passion for human-centered design comes from being an outgoing, empathetic person — I strive to create experiences that work for people of all abilities. Want to connect? Just click <a href="/contact" class="text-teal underline">here</a>.
-      </p>
+    <h1 class="text-4xl md:text-5xl font-bold text-primary mb-8 font-sans transition-all duration-300">Tour de Lakewood</h1>
+    
+    <div class="relative overflow-hidden rounded-lg shadow-lg my-8 transition-all duration-300 hover:shadow-xl">
+      <img src="/images/tour_de_lakewood.png" alt="Tour de Lakewood Screenshot" class="w-full transition-transform duration-500 hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
     </div>
-  
+
+    <!-- <p class="text-lg md:text-xl leading-relaxed text-gray-700 text-xl">Dreamed up and built Tour de Lakewood — a free, community cycling event that challenges riders to explore every corner of Lakewood, Ohio in a single day. Handled everything from concept to site.</p> -->
+
+    <article class="mt-12 text-left prose prose-lg text-dark text-xl">
+      <h2>Overview</h2>
+<p>Conceived and launched <strong>Tour de Lakewood</strong>, a free community cycling event billed as &quot;the most epic community cycling event Lakewood, Ohio has ever seen.&quot; The event invites riders of all skill levels to explore Lakewood's 5.5 square miles on their own terms — no mandatory route, no entry fee, just 12 hours to cover as much of the city as possible.</p>
+<p>The inaugural edition ran in 2025 as a small informal ride. The 2026 edition scaled up significantly, with the event running in affiliation with <strong>Bike Lakewood</strong>, the local branch of Bike Cleveland.</p>
+<h2>Key Features Built</h2>
+<ul>
+<li><strong>Route Analyzer Tool</strong> - Custom GPX upload tool that calculates exactly how many miles of a rider's ride fell inside Lakewood city limits and the percentage of city coverage achieved</li>
+<li><strong>Leaderboards</strong> - Post-event rankings across three categories: total distance, map coverage percentage, and elevation gain</li>
+<li><strong>Event Info &amp; Registration</strong> - Full event site with format details, participation guidelines, and FAQ</li>
+</ul>
+<h2>Technical Implementation</h2>
+<ul>
+<li>Built the full site from scratch using <strong>Astro</strong> and <strong>JavaScript</strong></li>
+<li>Developed a <strong>GPX file analyzer</strong> that parses GPS data from Strava or Garmin exports and calculates in-bounds mileage against city limits</li>
+</ul>
+<h2>Impact</h2>
+<p>Tour de Lakewood brought together casual riders, families on cruiser bikes, and competitive cyclists under one community event with zero barriers to entry. From a small handful of riders in 2025 to a growing community event in 2026 — built and organized entirely from scratch.</p>
+
+    </article>
+
+    
+      <div class="mt-12">
+        <a href="https://tourdelakewood.com" class="group inline-flex items-center bg-primary text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 font-sans text-xl hover:bg-teal">
+          Visit Project
+          <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    
+
   </div>
 </section>  
   </main>
