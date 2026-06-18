@@ -6,7 +6,7 @@ duration: "2022 - Present"
 technologies: ["D3.js", "USWDS", "WCAG 2.2", "JavaScript", "Figma"]
 image: "/images/notify_landing.jpg"
 layout: "project.njk"
-order: 2
+order: 3
 ---
 
 ## Overview

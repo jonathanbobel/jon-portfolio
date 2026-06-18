@@ -7,7 +7,7 @@ technologies: ["React", "TypeScript", "Storybook", "Figma", "Design Systems"]
 link: "https://primary.com"
 image: "/images/primary_screenshot.png"
 layout: "project.njk"
-order: 3
+order: 4
 ---
 
 ## Overview

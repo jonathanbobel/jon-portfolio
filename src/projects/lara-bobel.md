@@ -7,7 +7,7 @@ technologies: ["HTML", "CSS", "JavaScript", "Portfolio Design"]
 link: "https://larabobel.com"
 image: "/images/lara_bobel.jpg"
 layout: "project.njk"
-order: 7
+order: 8
 ---
 
 ## Overview

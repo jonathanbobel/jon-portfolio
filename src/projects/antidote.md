@@ -7,7 +7,7 @@ technologies: ["React", "Node.js", "MongoDB", "Healthcare", "Inventory Managemen
 link: "https://antidote.com"
 image: "/images/antidote.jpg"
 layout: "project.njk"
-order: 6
+order: 7
 ---
 
 ## Overview

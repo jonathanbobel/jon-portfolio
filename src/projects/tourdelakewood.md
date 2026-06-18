@@ -7,7 +7,7 @@ technologies: ["Astro", "JavaScript"]
 link: "https://tourdelakewood.com"
 image: "/images/tour_de_lakewood.png"
 layout: "project.njk"
-order: 8
+order: 1
 ---
 
 ## Overview
